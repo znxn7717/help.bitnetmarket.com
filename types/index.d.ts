@@ -8,11 +8,17 @@ interface DefaultConfig {
     customizable: boolean;
     color: Color;
     radius: number;
+    direction: string;
   };
   header: {
     title: string;
     showTitle: boolean;
     border: boolean;
+    icon: {
+      light: string;
+      dark: string;
+    };
+    showIcon: boolean;
     logo: {
       light: string;
       dark: string;

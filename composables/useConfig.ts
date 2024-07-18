@@ -10,13 +10,19 @@ const defaultConfig: DefaultConfig = {
     customizable: true,
     color: 'zinc',
     radius: 0.5,
+    direction: 'ltr',
   },
   header: {
     title: 'shadcn-docs',
     showTitle: true,
+    icon: {
+      light: '/bitnetmarket_icon1.svg',
+      dark: '/bitnetmarket_icon1.svg',
+    },
+    showIcon: true,
     logo: {
-      light: '/logo.svg',
-      dark: '/logo-dark.svg',
+      light: '/bitnetmarket_logo.svg',
+      dark: '/bitnetmarket_logo_dark.svg',
     },
     showTitleInMobile: false,
     border: false,

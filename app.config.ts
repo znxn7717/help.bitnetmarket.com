@@ -9,13 +9,19 @@ export default defineAppConfig({
       customizable: true,
       color: 'zinc',
       radius: 0.5,
+      direction: 'rtl',
     },
     header: {
-      title: 'shadcn-docs',
-      showTitle: true,
+      title: 'bitnetmarket',
+      showTitle: false,
+      icon: {
+        light: '/bitnetmarket_icon1.svg',
+        dark: '/bitnetmarket_icon1.svg',
+      },
+      showIcon: true,
       logo: {
-        light: '/logo.svg',
-        dark: '/logo-dark.svg',
+        light: '/bitnetmarket_logo.svg',
+        dark: '/bitnetmarket_logo_dark.svg',
       },
       darkModeToggle: true,
       nav: [{
