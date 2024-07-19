@@ -44,7 +44,7 @@
 
   <!-- rtl -->
   <li
-    class="rounded-md transition-all underline-offset-4 [&:not(:first-child)]:pt-3"
+    class="rounded-md transition-all underline-offset-4 [&:not(:first-child)]:pt-3 px-3"
     :class="[level > 0 && 'pr-4']"
     v-if="direction == 'rtl'"
     dir="rtl"

@@ -26,8 +26,15 @@
           </UiNavigationMenuContent>
         </template>
         <NuxtLink v-else :to="item.to" :target="item.target">
-          <Icon name="lucide:arrow-up-right" class="absolute right-2 top-2 text-muted-foreground" size="13" />
-          <div class="pr-6 font-semibold bg-transparent" :class="navigationMenuTriggerStyle()">
+          <Icon
+            name="lucide:arrow-up-right"
+            class="absolute right-2 top-2 text-muted-foreground"
+            size="13"
+          />
+          <div
+            class="pr-6 font-semibold bg-transparent"
+            :class="navigationMenuTriggerStyle()"
+          >
             {{ item.title }}
           </div>
         </NuxtLink>
@@ -37,7 +44,7 @@
 </template>
 
 <script setup lang="ts">
-import { navigationMenuTriggerStyle } from '@/components/ui/navigation-menu';
+import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 
 const { nav } = useConfig().value.header;
 </script>
