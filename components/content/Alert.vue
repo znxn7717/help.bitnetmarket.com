@@ -1,8 +1,10 @@
 <template>
+  <!-- ltr -->
   <UiAlert
     class="[&:not(:first-child)]:mt-5 transition-all"
     :class="[typeTwClass[type], to && 'cursor-pointer hover:bg-muted/50']"
     @click="alertClick"
+    v-if="direction == 'ltr'"
   >
     <Icon v-if="icon && title" :name="icon" size="16" />
     <UiAlertTitle v-if="title" class="font-semibold">
@@ -10,33 +12,77 @@
     </UiAlertTitle>
     <UiAlertDescription>
       <div class="flex flex-row space-x-2">
-        <Icon v-if="icon && !title" :name="icon" size="16" class="self-center mb-[2px] min-w-5" />
+        <Icon
+          v-if="icon && !title"
+          :name="icon"
+          size="16"
+          class="self-center mb-[2px] min-w-5"
+        />
         <span :class="[to && 'pr-3']">
           <slot />
         </span>
       </div>
-      <Icon v-if="to" name="lucide:arrow-up-right" class="absolute right-4 top-4" />
+      <Icon
+        v-if="to"
+        name="lucide:arrow-up-right"
+        class="absolute right-4 top-4"
+      />
+    </UiAlertDescription>
+  </UiAlert>
+
+  <!-- rtl -->
+  <UiAlert
+    class="[&:not(:first-child)]:mt-5 transition-all"
+    :class="[typeTwClass[type], to && 'cursor-pointer hover:bg-muted/50']"
+    @click="alertClick"
+    v-if="direction == 'rtl'"
+  >
+    <Icon v-if="icon && title" :name="icon" size="16" />
+    <UiAlertTitle v-if="title" class="font-semibold">
+      {{ title }}
+    </UiAlertTitle>
+    <UiAlertDescription>
+      <div class="flex flex-row space-x-2">
+        <Icon
+          v-if="icon && !title"
+          :name="icon"
+          size="16"
+          class="self-center mb-[2px] min-w-5 ml-2"
+        />
+        <span :class="[to && 'pl-3']">
+          <slot />
+        </span>
+      </div>
+      <Icon
+        v-if="to"
+        name="lucide:arrow-up-left"
+        class="absolute left-4 top-4"
+      />
     </UiAlertDescription>
   </UiAlert>
 </template>
 
 <script setup lang="ts">
-const props = withDefaults(defineProps<{
-  title?: string;
-  icon?: string;
-  type?: 'default' | 'info' | 'warning' | 'success' | 'danger';
-  to?: string;
-  target?: string;
-}>(), {
-  type: 'default',
-});
+const { direction } = useConfig().value.theme;
+const props = withDefaults(
+  defineProps<{
+    title?: string;
+    icon?: string;
+    type?: "default" | "info" | "warning" | "success" | "danger";
+    to?: string;
+    target?: string;
+  }>(),
+  {
+    type: "default",
+  }
+);
 
 const typeTwClass = {
-  default: '',
-  info: 'border-sky-600 text-sky-600 [&>svg]:text-sky-600',
-  warning: 'border-amber-600 text-amber-600 [&>svg]:text-amber-600',
-  success: 'border-green-600 text-green-600 [&>svg]:text-green-600',
-  danger: 'border-red-600 text-red-600 [&>svg]:text-red-600',
+  default: "",
+  info: "border-sky-600 text-sky-600 [&>svg]:text-sky-600",
+  warning: "border-amber-600 text-amber-600 [&>svg]:text-amber-600",
+  success: "border-green-600 text-green-600 [&>svg]:text-green-600",
+  danger: "border-red-600 text-red-600 [&>svg]:text-red-600",
 };
 
 function alertClick() {
