@@ -2,7 +2,7 @@ import { defu } from 'defu';
 
 const defaultConfig: DefaultConfig = {
   site: {
-    name: 'shadcn-docs',
+    name: 'bitnetmarket',
     description: 'Beautifully designed Nuxt Content template built with shadcn-vue. Customizable. Compatible. Open Source.',
     ogImage: '/hero.png',
   },
@@ -13,7 +13,7 @@ const defaultConfig: DefaultConfig = {
     direction: 'ltr',
   },
   header: {
-    title: 'shadcn-docs',
+    title: 'bitnetmarket',
     showTitle: true,
     icon: {
       light: '/bitnetmarket_icon1.svg',

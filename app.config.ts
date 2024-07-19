@@ -1,12 +1,12 @@
 export default defineAppConfig({
   shadcnDocs: {
     site: {
-      name: 'shadcn-docs',
+      name: 'bitnetmarket',
       description: 'Beautifully designed Nuxt Content template built with shadcn-vue. Customizable. Compatible. Open Source.',
       ogImage: '/hero.png',
     },
     theme: {
-      customizable: true,
+      customizable: false,
       color: 'zinc',
       radius: 0.5,
       direction: 'rtl',
@@ -14,6 +14,7 @@ export default defineAppConfig({
     header: {
       title: 'bitnetmarket',
       showTitle: false,
+      border: false,
       icon: {
         light: '/bitnetmarket_icon1.svg',
         dark: '/bitnetmarket_icon1.svg',
@@ -23,6 +24,7 @@ export default defineAppConfig({
         light: '/bitnetmarket_logo.svg',
         dark: '/bitnetmarket_logo_dark.svg',
       },
+      showTitleInMobile: true,
       darkModeToggle: true,
       nav: [{
         title: 'Docs',

@@ -1,0 +1,4 @@
+const { direction } = useConfig().value.theme;
+
+v-if="direction == 'rtl'"
+
