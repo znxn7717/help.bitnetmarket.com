@@ -12,10 +12,11 @@ navigation: false
 actions:
   - name: شروع کن
     to: /getting-started
+    rightIcon: 'lucide:rocket'
   - name: مقررات مارکت
     variant: outline
-    to: https://github.com/ZTL-UwU/shadcn-docs-nuxt
-    rightIcon: 'lucide:github'
+    to: /terms
+    rightIcon: 'solar:ruler-outline'
 ---
 
 #title

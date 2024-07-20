@@ -19,6 +19,7 @@
   <div
     class="absolute right-0 top-full flex justify-center"
     v-if="direction == 'rtl'"
+    dir="rtl"
   >
     <NavigationMenuViewport
       v-bind="forwardedProps"

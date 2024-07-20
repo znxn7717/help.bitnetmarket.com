@@ -31,7 +31,8 @@
     >
       <span class="overflow-hidden ml-auto"> جستجو ... </span>
       <Kbd class="hidden md:block mr-auto">
-        <span class="text-xs">K</span>⌘
+        <span class="text-xs">Ctrl </span>K
+        <!-- ⌘ -->
       </Kbd>
     </UiButton>
     <UiButton v-else variant="ghost" size="icon" @click="isOpen = true">
