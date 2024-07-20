@@ -27,15 +27,15 @@ export default defineAppConfig({
       showTitleInMobile: true,
       darkModeToggle: true,
       nav: [{
-        title: 'Docs',
+        title: 'مستندات',
         links: [{
-          title: 'Getting Started',
-          to: '/getting-started',
-          description: 'Start building your document with shadcn-docs-nuxt',
+          title: 'فروشنده',
+          to: '/seller',
+          description: 'مطالب مربوط به فروشندگان',
         }, {
-          title: 'API',
-          to: '/api',
-          description: 'Discover the configurations and exposed APIs.',
+          title: 'مشتری',
+          to: '/customer',
+          description: 'مطالب مربوط به مشتریان',
           target: '_self',
         }],
       }, {

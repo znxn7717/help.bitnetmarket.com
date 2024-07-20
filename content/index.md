@@ -19,10 +19,21 @@ actions:
 ---
 
 #title
-Effortless and Beautiful<br>Docs Template.
-
+<div class="flex justify-end gap-2">
+  <h1>
+  نیاز به راهنما داری؟
+  </h1>
+  <h1 class="text-primary">
+  ما هواتو داریم
+  </h1>
+</div>
 #description
-Beautifully designed Nuxt Content template built with shadcn-vue.<br>Customizable. Compatible. Open Source.
+جدیدترین مطالب درباره
+<span class= "tracking-tighter">
+بیت نت مارکت
+</span>
+را بخوانید،
+<br>از اطلاعیه‌ها گرفته تا آموزش‌های کاربردی.
 ::
 
 <div class="border rounded-lg shadow-md">

@@ -1,9 +1,17 @@
+* {
+    scrollbar-width: thin;
+}
+
 html {
     color-scheme: light;
 }
 
 html.dark {
     color-scheme: dark;
+}
+
+h1 {
+    font-weight: 200 !important;
 }
 
 .theme-zinc {

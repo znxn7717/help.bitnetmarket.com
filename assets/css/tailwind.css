@@ -3,6 +3,17 @@
 @tailwind utilities;
 
 @layer base {
+
+  @font-face {
+    font-family: 'Vazir';
+    src: url('../fonts/Vazirmatn[wght].ttf') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Behdad';
+    src: url('../fonts/Behdad-Regular.ttf') format('woff2');
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
