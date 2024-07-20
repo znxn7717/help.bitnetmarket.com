@@ -111,7 +111,7 @@
               <span dir="ltr">
                 {{ routePath }}
               </span>
-              یافت نشد.
+              وجود ندارد.
             </h3>
           </Card>
 
@@ -139,7 +139,6 @@
 const { page } = useContent();
 const config = useConfig();
 const { direction } = useConfig().value.theme;
-
 const routePath = useRoute().path;
 
 useSeoMeta({

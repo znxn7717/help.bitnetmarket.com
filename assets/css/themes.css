@@ -1,5 +1,6 @@
 * {
     scrollbar-width: thin;
+    @apply font-vazir;
 }
 
 html {
@@ -11,7 +12,11 @@ html.dark {
 }
 
 h1 {
-    font-weight: 200 !important;
+    font-weight: 100 !important;
+}
+
+p {
+    @apply font-behdad;
 }
 
 .theme-zinc {

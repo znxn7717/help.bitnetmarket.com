@@ -1,6 +1,6 @@
 ---
-title: Home
-navigation: false
+title: مقررات مارکت
+navigation: /terms
 ---
 
 ::hero
