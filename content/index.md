@@ -5,34 +5,32 @@ navigation: false
 
 ::hero
 ---
-announcement:
+<!-- announcement:
   title: 'Release v0.4.1'
   icon: 'noto:party-popper'
-  to: /getting-started/changelog
+  to: /getting-started/changelog -->
 actions:
-  - name: Get Started
+  - name: شروع کن
     to: /getting-started
-  - name: GitHub
+  - name: مقررات مارکت
     variant: outline
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt
-    leftIcon: 'lucide:github'
+    rightIcon: 'lucide:github'
 ---
 
 #title
-<div class="flex justify-end gap-2">
-  <h1>
-  نیاز به راهنما داری؟
-  </h1>
-  <h1 class="text-primary">
+<h1>
+نیاز به راهنمایی داری؟
+  <span class="text-primary">
   ما هواتو داریم
-  </h1>
-</div>
+  </span>
+</h1>
 #description
 جدیدترین مطالب درباره
 <span class= "tracking-tighter">
 بیت نت مارکت
 </span>
-را بخوانید،
+را بخوان
 <br>از اطلاعیه‌ها گرفته تا آموزش‌های کاربردی.
 ::
 

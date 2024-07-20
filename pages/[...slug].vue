@@ -94,7 +94,7 @@
             </p>
           </div>
 
-          <Alert
+          <!-- <Alert
             v-if="!page?.body || page?.body?.children?.length === 0"
             title="Empty Page"
             icon="lucide:circle-x"
@@ -102,7 +102,18 @@
             Start writing in
             <ProseCodeInline>content/{{ page?._file }}</ProseCodeInline> to see
             this page taking shape.
-          </Alert>
+          </Alert> -->
+
+          <Card v-if="!page?.body || page?.body?.children?.length === 0">
+            <h1 class="text-9xl text-center">404</h1>
+            <h3 class="text-center">
+              صفحه
+              <span dir="ltr">
+                {{ routePath }}
+              </span>
+              یافت نشد.
+            </h3>
+          </Card>
 
           <ContentRenderer
             v-else
@@ -128,6 +139,8 @@
 const { page } = useContent();
 const config = useConfig();
 const { direction } = useConfig().value.theme;
+
+const routePath = useRoute().path;
 
 useSeoMeta({
   title: `${page.value?.title ?? "404"} - ${config.value.site.name}`,

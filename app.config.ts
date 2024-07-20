@@ -1,7 +1,7 @@
 export default defineAppConfig({
   shadcnDocs: {
     site: {
-      name: 'bitnetmarket',
+      name: 'Bitnetmarket',
       description: 'Beautifully designed Nuxt Content template built with shadcn-vue. Customizable. Compatible. Open Source.',
       ogImage: '/hero.png',
     },
@@ -12,7 +12,7 @@ export default defineAppConfig({
       direction: 'rtl',
     },
     header: {
-      title: 'bitnetmarket',
+      title: 'Bitnetmarket',
       showTitle: false,
       border: false,
       icon: {
@@ -39,36 +39,13 @@ export default defineAppConfig({
           target: '_self',
         }],
       }, {
-        title: 'Credits',
-        links: [{
-          title: 'shadcn-ui',
-          to: 'https://ui.shadcn.com/',
-          description: 'For the beautiful component design & docs design',
-          target: '_blank',
-        }, {
-          title: 'shadcn-vue',
-          to: 'https://www.shadcn-vue.com/',
-          description: 'For the vue port of shadcn-ui & some docs component source',
-          target: '_blank',
-        }, {
-          title: 'Docus',
-          to: 'https://docus.dev/',
-          description: 'For inspiration & some docs component source',
-          target: '_blank',
-        }, {
-          title: 'Nuxt Content',
-          to: 'https://content.nuxt.com/',
-          description: 'Content made easy for Vue Developers',
-          target: '_blank',
-        }],
-      }, {
-        title: 'Use This Template',
-        to: '/getting-started/installation',
-        target: '_self',
+        title: 'مارکت',
+        to: 'https://www.bitnetmarket.com/',
+        target: '_blank',
       }],
       links: [{
         icon: 'lucide:github',
-        to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt',
+        to: 'https://github.com/znxn7717/shadcn',
         target: '_blank',
       }],
     },
@@ -125,32 +102,32 @@ export default defineAppConfig({
       },
     },
     footer: {
-      credits: 'Copyright © 2024',
+      credits: 'MIT سورس باز',
       links: [
         {
-          title: 'shadcn-vue',
-          to: 'https://www.shadcn-vue.com/',
+          title: 'بیت نت مارکت',
+          to: 'https://www.bitnetmarket.com/',
           target: '_blank',
         },
         {
           icon: 'lucide:github',
-          to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt',
+          to: 'https://github.com/znxn7717/shadcn',
           target: '_blank',
         },
       ],
     },
     toc: {
       enable: true,
-      title: 'On This Page',
+      title: 'عناوین این صفحه',
       links: [{
-        title: 'Star on GitHub',
+        title: 'امتیاز گیت هاب',
         icon: 'lucide:star',
-        to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt',
+        to: 'https://github.com/znxn7717/shadcn',
         target: '_blank',
       }, {
-        title: 'Create Issues',
+        title: 'پنل فروشنده',
         icon: 'lucide:circle-dot',
-        to: 'https://github.com/ZTL-UwU/shadcn-docs-nuxt/issues',
+        to: 'https://seller.bitnetmarket.com',
         target: '_blank',
       }],
     },

@@ -1,7 +1,7 @@
 <template>
-  <!-- ltr -->
-  <UiNavigationMenu v-if="direction == 'ltr'">
-    <UiNavigationMenuList>
+  <UiNavigationMenu>
+    <!-- ltr -->
+    <UiNavigationMenuList v-if="direction == 'ltr'">
       <UiNavigationMenuItem v-for="(item, i) in nav" :key="i">
         <template v-if="item.links">
           <UiNavigationMenuTrigger class="font-semibold bg-transparent">
@@ -41,11 +41,9 @@
         </NuxtLink>
       </UiNavigationMenuItem>
     </UiNavigationMenuList>
-  </UiNavigationMenu>
 
-  <!-- rtl -->
-  <UiNavigationMenu v-if="direction == 'rtl'" dir="rtl">
-    <UiNavigationMenuList>
+    <!-- rtl -->
+    <UiNavigationMenuList v-if="direction == 'rtl'" dir="rtl">
       <UiNavigationMenuItem v-for="(item, i) in nav" :key="i">
         <template v-if="item.links">
           <UiNavigationMenuTrigger class="font-semibold bg-transparent">
