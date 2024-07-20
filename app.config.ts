@@ -6,10 +6,10 @@ export default defineAppConfig({
       ogImage: '/hero.png',
     },
     theme: {
-      customizable: false,
-      color: 'green',
+      customizable: true,
+      color: 'orange',
       radius: 0.5,
-      direction: 'rtl',
+      direction: 'ltr',
     },
     header: {
       title: 'Bitnetmarket',
