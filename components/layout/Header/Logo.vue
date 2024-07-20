@@ -6,13 +6,12 @@
       to="/"
       class="flex"
     >
-      <!-- <NuxtImg v-if="showIcon" :src="icon.light" class="dark:hidden h-7 mr-1" />
+      <NuxtImg v-if="showIcon" :src="icon.light" class="dark:hidden h-7 mr-1" />
       <NuxtImg
         v-if="showIcon"
         :src="icon.dark"
         class="hidden dark:block h-7 mr-1"
-      /> -->
-      <LayoutHeaderIcon v-if="showIcon" class="ml-1" />
+      />
       <NuxtImg :src="logo.light" class="dark:hidden h-7" />
       <NuxtImg :src="logo.dark" class="hidden dark:block h-7" />
       <span v-if="showTitle && title" class="self-center font-bold ml-3">

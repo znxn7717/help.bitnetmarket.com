@@ -9,7 +9,7 @@ export default defineAppConfig({
       customizable: true,
       color: 'orange',
       radius: 0.5,
-      direction: 'ltr',
+      direction: 'rtl',
     },
     header: {
       title: 'Bitnetmarket',
