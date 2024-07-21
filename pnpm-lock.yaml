@@ -47,12 +47,18 @@ importers:
       tailwind-merge:
         specifier: ^2.4.0
         version: 2.4.0
+      tailwindcss:
+        specifier: ^3.4.6
+        version: 3.4.6
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.6)
       typescript:
         specifier: ^5.5.3
         version: 5.5.3
+      ufo:
+        specifier: ^1.5.4
+        version: 1.5.4
       vue:
         specifier: ^3.4.31
         version: 3.4.33(typescript@5.5.3)
