@@ -48,7 +48,7 @@
         </template>
       </div>
     </div>
-    <div class="space-y-1.5">
+    <!-- <div class="space-y-1.5">
       <UiLabel>Theme</UiLabel>
       <div class="grid grid-cols-3 gap-2">
         <UiButton
@@ -85,7 +85,7 @@
           <span class="text-xs capitalize">System</span>
         </UiButton>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <!-- rtl -->
@@ -137,7 +137,7 @@
         </template>
       </div>
     </div>
-    <div class="space-y-1.5">
+    <!-- <div class="space-y-1.5">
       <UiLabel>تم</UiLabel>
       <div class="grid grid-cols-3 gap-2">
         <UiButton
@@ -174,7 +174,7 @@
           <span class="text-xs capitalize">سیستم</span>
         </UiButton>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
