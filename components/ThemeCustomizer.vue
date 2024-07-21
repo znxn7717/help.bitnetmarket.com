@@ -2,7 +2,9 @@
   <!-- ltr -->
   <div v-if="direction === 'ltr'" class="grid gap-6">
     <div class="grid space-y-1">
-      <h1 class="text-lg text-foreground font-semibold">Customize</h1>
+      <h1 class="text-lg text-foreground font-semibold">
+        Customize
+      </h1>
       <p class="text-sm text-muted-foreground">
         Pick a style and color for the docs.
       </p>
@@ -91,7 +93,9 @@
   <!-- rtl -->
   <div v-if="direction === 'rtl'" class="grid gap-6" dir="rtl">
     <div class="grid space-y-1">
-      <h1 class="text-lg text-foreground font-semibold">استایل دهی</h1>
+      <h1 class="text-lg text-foreground font-semibold">
+        استایل دهی
+      </h1>
       <!-- <p class="text-sm text-muted-foreground">
         Pick a style and color for the docs.
       </p> -->
@@ -179,54 +183,54 @@
 </template>
 
 <script setup lang="ts">
-import { themes } from "@/lib/registry/themes";
+import { themes } from '@/lib/registry/themes';
 
 const { themeClass, theme, radius, setTheme, setRadius } = useThemes();
 const { direction } = useConfig().value.theme;
 
 // Create an array of color values
 type Color =
-  | "zinc"
-  | "rose"
-  | "blue"
-  | "green"
-  | "orange"
-  | "red"
-  | "slate"
-  | "stone"
-  | "gray"
-  | "neutral"
-  | "yellow"
-  | "violet";
+  | 'zinc'
+  | 'rose'
+  | 'blue'
+  | 'green'
+  | 'orange'
+  | 'red'
+  | 'slate'
+  | 'stone'
+  | 'gray'
+  | 'neutral'
+  | 'yellow'
+  | 'violet';
 
 const allColors: Color[] = [
-  "zinc",
-  "rose",
-  "blue",
-  "green",
-  "orange",
-  "red",
-  "slate",
-  "stone",
-  "gray",
-  "neutral",
-  "yellow",
-  "violet",
+  'zinc',
+  'rose',
+  'blue',
+  'green',
+  'orange',
+  'red',
+  'slate',
+  'stone',
+  'gray',
+  'neutral',
+  'yellow',
+  'violet',
 ];
 
 const allColorsFa: string[] = [
-  "روی",
-  "رز",
-  "آبی",
-  "سبز",
-  "نارنجی",
-  "قرمز",
-  "خاکستری",
-  "سنگی",
-  "خاکستری",
-  "خنثی",
-  "زرد",
-  "بنفش",
+  'روی',
+  'رز',
+  'آبی',
+  'سبز',
+  'نارنجی',
+  'قرمز',
+  'خاکستری',
+  'سنگی',
+  'خاکستری',
+  'خنثی',
+  'زرد',
+  'بنفش',
 ];
 
 const RADII = [0, 0.25, 0.5, 0.75, 1];
@@ -237,7 +241,7 @@ const colorMap = allColors.reduce((acc, color, index) => {
 }, {} as Record<Color, string>);
 
 function getColorName(color: Color) {
-  return direction === "rtl" ? colorMap[color] : color;
+  return direction === 'rtl' ? colorMap[color] : color;
 }
 
 // Whenever the theme value changes, update the document class list
@@ -252,19 +256,19 @@ watch(radius, () => {
 
 function setClassTheme() {
   document.documentElement.classList.remove(
-    ...allColors.map((color) => `theme-${color}`)
+    ...allColors.map(color => `theme-${color}`),
   );
   document.documentElement.classList.add(themeClass.value);
 }
 
 function setStyleRadius() {
-  document.documentElement.style.setProperty("--radius", `${radius.value}rem`);
+  document.documentElement.style.setProperty('--radius', `${radius.value}rem`);
 }
 
 function backgroundColor(color: Color) {
-  const bg = themes.find((theme) => theme.name === color);
+  const bg = themes.find(theme => theme.name === color);
   return `hsl(${bg?.activeColor.light})`;
 }
 
-const colorMode = useColorMode();
+// const colorMode = useColorMode();
 </script>
