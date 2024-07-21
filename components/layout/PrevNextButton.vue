@@ -79,9 +79,9 @@
 </template>
 
 <script setup lang="ts">
-const { direction } = useConfig().value.theme;
 defineProps<{
   prevNext: any;
-  side: "left" | "right";
+  side: 'left' | 'right';
 }>();
+const { direction } = useConfig().value.theme;
 </script>

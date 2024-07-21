@@ -39,7 +39,7 @@
 </template>
 
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from "vue";
+import { type HTMLAttributes, computed } from 'vue';
 import {
   DialogClose,
   DialogContent,
@@ -48,24 +48,21 @@ import {
   DialogOverlay,
   DialogPortal,
   useForwardPropsEmits,
-} from "radix-vue";
-import { X } from "lucide-vue-next";
-import { type SheetVariants, sheetVariants } from ".";
-import { cn } from "@/lib/utils";
-
-const { direction } = useConfig().value.theme;
-interface SheetContentProps extends DialogContentProps {
-  class?: HTMLAttributes["class"];
-  side?: SheetVariants["side"];
-}
+} from 'radix-vue';
+import { X } from 'lucide-vue-next';
+import { type SheetVariants, sheetVariants } from '.';
+import { cn } from '@/lib/utils';
 
 defineOptions({
   inheritAttrs: false,
 });
-
 const props = defineProps<SheetContentProps>();
-
 const emits = defineEmits<DialogContentEmits>();
+const { direction } = useConfig().value.theme;
+interface SheetContentProps extends DialogContentProps {
+  class?: HTMLAttributes['class'];
+  side?: SheetVariants['side'];
+}
 
 const delegatedProps = computed(() => {
   const { class: _, side, ...delegated } = props;

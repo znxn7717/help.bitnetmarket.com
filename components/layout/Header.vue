@@ -1,9 +1,9 @@
 <template>
   <!-- ltr -->
   <header
+    v-if="direction == 'ltr'"
     class="sticky z-40 top-0 bg-background/80 backdrop-blur-lg"
     :class="{ 'lg:border-b': config.header.border }"
-    v-if="direction == 'ltr'"
   >
     <div
       class="px-4 md:px-8 flex h-14 items-center gap-2 justify-between"
@@ -52,9 +52,9 @@
 
   <!-- rtl -->
   <header
+    v-if="direction == 'rtl'"
     class="sticky z-40 top-0 bg-background/80 backdrop-blur-lg"
     :class="{ 'lg:border-b': config.header.border }"
-    v-if="direction == 'rtl'"
     dir="rtl"
   >
     <div

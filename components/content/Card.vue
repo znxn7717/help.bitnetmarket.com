@@ -1,8 +1,8 @@
 <template>
   <!-- ltr -->
   <div
-    class="[&:not(:first-child)]:mt-5 group-has-[div]:mt-0"
     v-if="direction == 'ltr'"
+    class="[&:not(:first-child)]:mt-5 group-has-[div]:mt-0"
   >
     <NuxtLink :to="to" :target="target">
       <UiCard
@@ -43,8 +43,8 @@
 
   <!-- rtl -->
   <div
-    class="[&:not(:first-child)]:mt-5 group-has-[div]:mt-0"
     v-if="direction == 'rtl'"
+    class="[&:not(:first-child)]:mt-5 group-has-[div]:mt-0"
   >
     <NuxtLink :to="to" :target="target">
       <UiCard
@@ -85,7 +85,6 @@
 </template>
 
 <script setup lang="ts">
-const { direction } = useConfig().value.theme;
 defineProps<{
   title?: string;
   description?: string;
@@ -95,4 +94,5 @@ defineProps<{
   target?: string;
   icon?: string;
 }>();
+const { direction } = useConfig().value.theme;
 </script>

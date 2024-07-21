@@ -1,9 +1,9 @@
 <template>
   <!-- ltr -->
   <ul
+    v-if="direction == 'ltr'"
     class="py-2.5"
     :class="[level > 0 && 'border-l']"
-    v-if="direction == 'ltr'"
   >
     <template v-for="link in links" :key="link._id">
       <LayoutAsideTreeItem :link="link" :level="level" />
@@ -12,9 +12,9 @@
 
   <!-- rtl -->
   <ul
+    v-if="direction == 'rtl'"
     class="py-2.5"
     :class="[level > 0 && 'border-r']"
-    v-if="direction == 'rtl'"
   >
     <template v-for="link in links" :key="link._id">
       <LayoutAsideTreeItem :link="link" :level="level" />
@@ -23,11 +23,11 @@
 </template>
 
 <script setup lang="ts">
-import type { NavItem } from "@nuxt/content";
+import type { NavItem } from '@nuxt/content';
 
-const { direction } = useConfig().value.theme;
 defineProps<{
   links: NavItem[];
   level: number;
 }>();
+const { direction } = useConfig().value.theme;
 </script>

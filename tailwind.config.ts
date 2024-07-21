@@ -16,8 +16,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        'vazir': ['Vazir'],
-        'behdad': ['Behdad'],
+        vazir: ['Vazir'],
+        behdad: ['Behdad'],
       },
       colors: {
         border: 'hsl(var(--border))',

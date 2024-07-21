@@ -1,9 +1,9 @@
 <template>
   <!-- ltr -->
   <li
+    v-if="direction == 'ltr'"
     class="rounded-md transition-all underline-offset-4 [&:not(:first-child)]:pt-3"
     :class="[level > 0 && 'pl-4']"
-    v-if="direction == 'ltr'"
   >
     <UiCollapsible v-if="link.children" v-model:open="isOpen">
       <UiCollapsibleTrigger class="w-full text-left">
@@ -44,9 +44,9 @@
 
   <!-- rtl -->
   <li
+    v-if="direction == 'rtl'"
     class="rounded-md transition-all underline-offset-4 [&:not(:first-child)]:pt-3 px-3"
     :class="[level > 0 && 'pr-4']"
-    v-if="direction == 'rtl'"
     dir="rtl"
   >
     <UiCollapsible v-if="link.children" v-model:open="isOpen">
@@ -88,7 +88,7 @@
 </template>
 
 <script setup lang="ts">
-import type { NavItem } from "@nuxt/content";
+import type { NavItem } from '@nuxt/content';
 
 const props = defineProps<{
   link: NavItem;
@@ -100,7 +100,7 @@ const { direction } = useConfig().value.theme;
 
 const collapsed = useCollapsedMap();
 const isOpen = ref(
-  collapsed.value.get(props.link._path) || (props.level < 1 && !collapse)
+  collapsed.value.get(props.link._path) || (props.level < 1 && !collapse),
 );
 watch(isOpen, (v) => {
   collapsed.value.set(props.link._path, v);

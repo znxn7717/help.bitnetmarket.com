@@ -102,15 +102,14 @@
 </template>
 
 <script setup lang="ts">
-const { direction } = useConfig().value.theme;
 const props = defineProps<{
   item: any;
   index: number;
 }>();
-
+const { direction } = useConfig().value.theme;
 const collapsed = useCollapsedMap();
 const isOpen = ref(
-  collapsed.value.get(`mobile-header-nav${props.index}`) || false
+  collapsed.value.get(`mobile-header-nav${props.index}`) || false,
 );
 watch(isOpen, (v) => {
   collapsed.value.set(`mobile-header-nav${props.index}`, v);

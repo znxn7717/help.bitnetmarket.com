@@ -1,10 +1,10 @@
 <template>
   <!-- ltr -->
   <UiAlert
+    v-if="direction == 'ltr'"
     class="[&:not(:first-child)]:mt-5 transition-all"
     :class="[typeTwClass[type], to && 'cursor-pointer hover:bg-muted/50']"
     @click="alertClick"
-    v-if="direction == 'ltr'"
   >
     <Icon v-if="icon && title" :name="icon" size="16" />
     <UiAlertTitle v-if="title" class="font-semibold">
@@ -32,10 +32,10 @@
 
   <!-- rtl -->
   <UiAlert
+    v-if="direction == 'rtl'"
     class="[&:not(:first-child)]:mt-5 transition-all"
     :class="[typeTwClass[type], to && 'cursor-pointer hover:bg-muted/50']"
     @click="alertClick"
-    v-if="direction == 'rtl'"
   >
     <Icon v-if="icon && title" :name="icon" size="16" />
     <UiAlertTitle v-if="title" class="font-semibold">
@@ -63,26 +63,25 @@
 </template>
 
 <script setup lang="ts">
-const { direction } = useConfig().value.theme;
 const props = withDefaults(
   defineProps<{
     title?: string;
     icon?: string;
-    type?: "default" | "info" | "warning" | "success" | "danger";
+    type?: 'default' | 'info' | 'warning' | 'success' | 'danger';
     to?: string;
     target?: string;
   }>(),
   {
-    type: "default",
-  }
+    type: 'default',
+  },
 );
-
+const { direction } = useConfig().value.theme;
 const typeTwClass = {
-  default: "",
-  info: "border-sky-600 text-sky-600 [&>svg]:text-sky-600",
-  warning: "border-amber-600 text-amber-600 [&>svg]:text-amber-600",
-  success: "border-green-600 text-green-600 [&>svg]:text-green-600",
-  danger: "border-red-600 text-red-600 [&>svg]:text-red-600",
+  default: '',
+  info: 'border-sky-600 text-sky-600 [&>svg]:text-sky-600',
+  warning: 'border-amber-600 text-amber-600 [&>svg]:text-amber-600',
+  success: 'border-green-600 text-green-600 [&>svg]:text-green-600',
+  danger: 'border-red-600 text-red-600 [&>svg]:text-red-600',
 };
 
 function alertClick() {

@@ -1,7 +1,7 @@
 <template>
   <LayoutHeader />
   <!-- ltr -->
-  <div class="border-b min-h-screen" v-if="direction == 'ltr'">
+  <div v-if="direction == 'ltr'" class="border-b min-h-screen">
     <div
       class="px-4 md:px-8 flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10"
       :class="[config.main.padded && 'container']"
@@ -14,8 +14,8 @@
       <main
         class="relative py-6"
         :class="[
-          config.toc.enable &&
-            'lg:gap-10 lg:py-8 lg:grid lg:grid-cols-[1fr_200px]',
+          config.toc.enable
+            && 'lg:gap-10 lg:py-8 lg:grid lg:grid-cols-[1fr_200px]',
         ]"
       >
         <div class="mx-auto w-full min-w-0">
@@ -62,7 +62,7 @@
   </div>
 
   <!-- rtl -->
-  <div class="border-b min-h-screen" v-if="direction == 'rtl'" dir="rtl">
+  <div v-if="direction == 'rtl'" class="border-b min-h-screen" dir="rtl">
     <div
       class="px-4 md:px-8 flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10"
       :class="[config.main.padded && 'container']"
@@ -75,8 +75,8 @@
       <main
         class="relative py-6"
         :class="[
-          config.toc.enable &&
-            'lg:gap-10 lg:py-8 lg:grid lg:grid-cols-[1fr_200px]',
+          config.toc.enable
+            && 'lg:gap-10 lg:py-8 lg:grid lg:grid-cols-[1fr_200px]',
         ]"
       >
         <div class="mx-auto w-full min-w-0">
@@ -105,7 +105,9 @@
           </Alert> -->
 
           <Card v-if="!page?.body || page?.body?.children?.length === 0">
-            <h1 class="text-9xl text-center">404</h1>
+            <h1 class="text-9xl text-center">
+              404
+            </h1>
             <h3 class="text-center">
               صفحه
               <span dir="ltr">
@@ -142,7 +144,7 @@ const { direction } = useConfig().value.theme;
 const routePath = useRoute().path;
 
 useSeoMeta({
-  title: `${page.value?.title ?? "404"} - ${config.value.site.name}`,
+  title: `${page.value?.title ?? '404'} - ${config.value.site.name}`,
   ogTitle: page.value?.title,
   description: page.value?.description,
 });

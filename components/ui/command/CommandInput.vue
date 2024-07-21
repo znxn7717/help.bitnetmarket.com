@@ -1,9 +1,9 @@
 <template>
   <!-- ltr -->
   <div
+    v-if="direction == 'ltr'"
     class="flex items-center border-b px-3"
     cmdk-input-wrapper
-    v-if="direction == 'ltr'"
   >
     <Search class="mr-2 h-4 w-4 shrink-0 opacity-50" />
     <ComboboxInput
@@ -12,7 +12,7 @@
       :class="
         cn(
           'flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50',
-          props.class
+          props.class,
         )
       "
     />
@@ -20,9 +20,9 @@
 
   <!-- rtl -->
   <div
+    v-if="direction == 'rtl'"
     class="flex items-center border-b px-3"
     cmdk-input-wrapper
-    v-if="direction == 'rtl'"
   >
     <Search class="mr-2 h-4 w-4 shrink-0 opacity-50" />
     <ComboboxInput
@@ -31,7 +31,7 @@
       :class="
         cn(
           'mr-8 flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50',
-          props.class
+          props.class,
         )
       "
     />
@@ -39,26 +39,24 @@
 </template>
 
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from "vue";
-import { Search } from "lucide-vue-next";
+import { type HTMLAttributes, computed } from 'vue';
+import { Search } from 'lucide-vue-next';
 import {
   ComboboxInput,
   type ComboboxInputProps,
   useForwardProps,
-} from "radix-vue";
-import { cn } from "@/lib/utils";
+} from 'radix-vue';
+import { cn } from '@/lib/utils';
 
-const { direction } = useConfig().value.theme;
 defineOptions({
   inheritAttrs: false,
 });
-
 const props = defineProps<
   ComboboxInputProps & {
-    class?: HTMLAttributes["class"];
+    class?: HTMLAttributes['class'];
   }
 >();
-
+const { direction } = useConfig().value.theme;
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props;
 

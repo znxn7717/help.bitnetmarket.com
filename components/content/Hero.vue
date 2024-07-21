@@ -1,8 +1,8 @@
 <template>
   <!-- ltr -->
   <section
-    class="mx-auto flex max-w-[980px] flex-col items-center gap-2 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-20"
     v-if="direction == 'ltr'"
+    class="mx-auto flex max-w-[980px] flex-col items-center gap-2 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-20"
   >
     <NuxtLink
       v-if="announcement"
@@ -52,8 +52,8 @@
 
   <!-- rtl -->
   <section
-    class="mx-auto flex max-w-[980px] flex-col items-center gap-2 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-20"
     v-if="direction == 'rtl'"
+    class="mx-auto flex max-w-[980px] flex-col items-center gap-2 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-20"
     dir="rtl"
   >
     <NuxtLink
@@ -104,7 +104,6 @@
 </template>
 
 <script setup lang="ts">
-const { direction } = useConfig().value.theme;
 defineProps<{
   announcement?: {
     to?: string;
@@ -118,15 +117,16 @@ defineProps<{
       leftIcon?: string;
       rightIcon?: string;
       variant?:
-        | "default"
-        | "link"
-        | "destructive"
-        | "outline"
-        | "secondary"
-        | "ghost";
+        | 'default'
+        | 'link'
+        | 'destructive'
+        | 'outline'
+        | 'secondary'
+        | 'ghost';
       to: string;
       target?: string;
-    }
+    },
   ];
 }>();
+const { direction } = useConfig().value.theme;
 </script>

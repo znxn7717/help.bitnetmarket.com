@@ -1,10 +1,10 @@
 <template>
   <!-- ltr -->
   <UiScrollArea
+    v-if="direction == 'ltr'"
     orientation="vertical"
     class="relative overflow-hidden h-full py-6 pr-6 text-sm"
     type="hover"
-    v-if="direction == 'ltr'"
   >
     <LayoutHeaderNavMobile v-if="isMobile" class="border-b pb-2 mb-5" />
     <LayoutSearchButton v-if="config.search.inAside" />
@@ -14,8 +14,8 @@
           :to="link._path"
           class="px-3 py-2 mb-1 hover:bg-muted rounded-md w-full flex gap-2 transition-all"
           :class="[
-            path.startsWith(link._path) &&
-              'bg-muted hover:bg-muted font-semibold text-primary',
+            path.startsWith(link._path)
+              && 'bg-muted hover:bg-muted font-semibold text-primary',
           ]"
         >
           <Icon
@@ -38,10 +38,10 @@
 
   <!-- rtl -->
   <UiScrollArea
+    v-if="direction == 'rtl'"
     orientation="vertical"
     class="relative overflow-hidden h-full py-6 pl-6 text-sm"
     type="hover"
-    v-if="direction == 'rtl'"
     dir="rtl"
   >
     <LayoutHeaderNavMobile v-if="isMobile" class="border-b pb-2 mb-5" />
@@ -52,8 +52,8 @@
           :to="link._path"
           class="px-3 py-2 mb-1 hover:bg-muted rounded-md w-full flex gap-2 transition-all"
           :class="[
-            path.startsWith(link._path) &&
-              'bg-muted hover:bg-muted font-semibold text-primary',
+            path.startsWith(link._path)
+              && 'bg-muted hover:bg-muted font-semibold text-primary',
           ]"
         >
           <Icon
@@ -85,9 +85,9 @@ const { direction } = useConfig().value.theme;
 
 const tree = computed(() => {
   const route = useRoute();
-  const path = route.path.split("/");
+  const path = route.path.split('/');
   if (config.value.aside.useLevel) {
-    const leveledPath = path.splice(0, 2).join("/");
+    const leveledPath = path.splice(0, 2).join('/');
 
     const dir = navDirFromPath(leveledPath, navigation.value);
     return dir ?? [];

@@ -1,6 +1,6 @@
 <template>
   <!-- ltr -->
-  <UiDialog v-model:open="open" v-if="direction == 'ltr'">
+  <UiDialog v-if="direction == 'ltr'" v-model:open="open">
     <UiDialogContent class="p-0">
       <VisuallyHidden as-child>
         <UiDialogTitle />
@@ -119,7 +119,7 @@
   </UiDialog>
 
   <!-- rtl -->
-  <UiDialog v-model:open="open" v-if="direction == 'rtl'">
+  <UiDialog v-if="direction == 'rtl'" v-model:open="open">
     <UiDialogContent class="p-0">
       <VisuallyHidden as-child>
         <UiDialogTitle />
@@ -130,15 +130,15 @@
       <UiCommand v-model:search-term="input" class="h-svh sm:h-[350px]">
         <UiCommandInput
           placeholder="جستجو در مستندات ..."
+          dir="rtl"
           @keydown.enter="handleEnter"
           @keydown.down="handleNavigate(1)"
           @keydown.up="handleNavigate(-1)"
-          dir="rtl"
         />
         <UiCommandList
           class="text-sm"
-          @escape-key-down="open = false"
           dir="rtl"
+          @escape-key-down="open = false"
         >
           <div v-if="searchResult?.length" class="p-1.5">
             <NuxtLink
@@ -244,10 +244,10 @@
 </template>
 
 <script setup lang="ts">
-import { VisuallyHidden } from "radix-vue";
+import { VisuallyHidden } from 'radix-vue';
 
 const { direction } = useConfig().value.theme;
-const open = defineModel<boolean>("open");
+const open = defineModel<boolean>('open');
 const colorMode = useColorMode();
 
 const activeSelect = ref(0);
@@ -255,14 +255,16 @@ const activeSelect = ref(0);
 const { Meta_K, Ctrl_K } = useMagicKeys({
   passive: false,
   onEventFired(e) {
-    if (e.key === "k" && (e.metaKey || e.ctrlKey)) e.preventDefault();
+    if (e.key === 'k' && (e.metaKey || e.ctrlKey))
+      e.preventDefault();
   },
 });
 watch([Meta_K, Ctrl_K], (v) => {
-  if (v[0] || v[1]) open.value = true;
+  if (v[0] || v[1])
+    open.value = true;
 });
 
-const input = ref("");
+const input = ref('');
 const searchResult = ref();
 watch(input, async (v) => {
   activeSelect.value = 0;
@@ -272,20 +274,20 @@ watch(input, async (v) => {
 function getHighlightedContent(text: string) {
   return text.replace(
     input.value,
-    `<span class="font-semibold underline">${input.value}</span>`
+    `<span class="font-semibold underline">${input.value}</span>`,
   );
 }
 
 const { navKeyFromPath } = useContentHelpers();
 const { navigation } = useContent();
 function getItemIcon(path: string) {
-  return navKeyFromPath(path, "icon", navigation.value);
+  return navKeyFromPath(path, 'icon', navigation.value);
 }
 
 watch(activeSelect, (value) => {
   document
     .querySelector(`[id="${value}"]`)
-    ?.scrollIntoView({ block: "nearest" });
+    ?.scrollIntoView({ block: 'nearest' });
 });
 
 function handleEnter() {
@@ -297,9 +299,10 @@ function handleEnter() {
 
 function handleNavigate(delta: -1 | 1) {
   if (
-    activeSelect.value + delta >= 0 &&
-    activeSelect.value + delta < searchResult.value.length
-  )
+    activeSelect.value + delta >= 0
+    && activeSelect.value + delta < searchResult.value.length
+  ) {
     activeSelect.value += delta;
+  }
 }
 </script>
