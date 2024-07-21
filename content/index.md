@@ -1,6 +1,7 @@
 ---
 title: Home
 navigation: false
+
 ---
 
 ::hero
@@ -15,7 +16,7 @@ actions:
     rightIcon: 'lucide:rocket'
   - name: مقررات مارکت
     variant: outline
-    to: /terms
+    to: /terms-of-use
     rightIcon: 'solar:ruler-outline'
 ---
 

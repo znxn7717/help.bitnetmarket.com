@@ -1,7 +1,7 @@
 export default defineAppConfig({
   shadcnDocs: {
     site: {
-      name: 'Bitnetmarket',
+      name: 'بیت نت مارکت',
       description: 'Beautifully designed Nuxt Content template built with shadcn-vue. Customizable. Compatible. Open Source.',
       ogImage: '/hero.png',
     },
@@ -55,7 +55,7 @@ export default defineAppConfig({
     },
     main: {
       breadCrumb: false,
-      showTitle: true,
+      showTitle: false,
       codeCopyToast: true,
       codeIcon: {
         'package.json': 'vscode-icons:file-type-node',
