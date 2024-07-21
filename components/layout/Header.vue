@@ -1,7 +1,7 @@
 <template>
   <!-- ltr -->
   <header
-    v-if="direction == 'ltr'"
+    v-if="direction === 'ltr'"
     class="sticky z-40 top-0 bg-background/80 backdrop-blur-lg"
     :class="{ 'lg:border-b': config.header.border }"
   >
@@ -52,7 +52,7 @@
 
   <!-- rtl -->
   <header
-    v-if="direction == 'rtl'"
+    v-if="direction === 'rtl'"
     class="sticky z-40 top-0 bg-background/80 backdrop-blur-lg"
     :class="{ 'lg:border-b': config.header.border }"
     dir="rtl"

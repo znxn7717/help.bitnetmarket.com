@@ -1,7 +1,7 @@
 <template>
   <!-- ltr -->
   <div
-    v-if="direction == 'ltr'"
+    v-if="direction === 'ltr'"
     class="absolute left-0 top-full flex justify-center"
   >
     <NavigationMenuViewport
@@ -17,7 +17,7 @@
 
   <!-- rtl -->
   <div
-    v-if="direction == 'rtl'"
+    v-if="direction === 'rtl'"
     class="absolute right-0 top-full flex justify-center"
     dir="rtl"
   >

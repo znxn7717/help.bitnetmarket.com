@@ -1,7 +1,7 @@
 <template>
   <!-- ltr -->
   <UiAlert
-    v-if="direction == 'ltr'"
+    v-if="direction === 'ltr'"
     class="[&:not(:first-child)]:mt-5 transition-all"
     :class="[typeTwClass[type], to && 'cursor-pointer hover:bg-muted/50']"
     @click="alertClick"
@@ -32,7 +32,7 @@
 
   <!-- rtl -->
   <UiAlert
-    v-if="direction == 'rtl'"
+    v-if="direction === 'rtl'"
     class="[&:not(:first-child)]:mt-5 transition-all"
     :class="[typeTwClass[type], to && 'cursor-pointer hover:bg-muted/50']"
     @click="alertClick"

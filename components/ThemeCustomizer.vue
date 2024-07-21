@@ -1,6 +1,6 @@
 <template>
   <!-- ltr -->
-  <div v-if="direction == 'ltr'" class="grid gap-6">
+  <div v-if="direction === 'ltr'" class="grid gap-6">
     <div class="grid space-y-1">
       <h1 class="text-lg text-foreground font-semibold">
         Customize
@@ -91,7 +91,7 @@
   </div>
 
   <!-- rtl -->
-  <div v-if="direction == 'rtl'" class="grid gap-6" dir="rtl">
+  <div v-if="direction === 'rtl'" class="grid gap-6" dir="rtl">
     <div class="grid space-y-1">
       <h1 class="text-lg text-foreground font-semibold">
         استایل دهی

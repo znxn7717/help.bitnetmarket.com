@@ -2,7 +2,7 @@
   <div>
     <!-- ltr -->
     <NuxtLink
-      v-if="logo.light && logo.dark && direction == 'ltr'"
+      v-if="logo.light && logo.dark && direction === 'ltr'"
       to="/"
       class="flex"
     >
@@ -21,7 +21,7 @@
 
     <!-- rtl -->
     <NuxtLink
-      v-if="logo.light && logo.dark && direction == 'rtl'"
+      v-if="logo.light && logo.dark && direction === 'rtl'"
       to="/"
       class="flex items-center"
       dir="rtl"

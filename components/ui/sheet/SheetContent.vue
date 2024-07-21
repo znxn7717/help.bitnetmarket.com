@@ -1,6 +1,6 @@
 <template>
   <!-- ltr -->
-  <DialogPortal v-if="direction == 'ltr'">
+  <DialogPortal v-if="direction === 'ltr'">
     <DialogOverlay
       class="fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0"
     />
@@ -19,7 +19,7 @@
   </DialogPortal>
 
   <!-- rtl -->
-  <DialogPortal v-if="direction == 'rtl'">
+  <DialogPortal v-if="direction === 'rtl'">
     <DialogOverlay
       class="fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0"
     />

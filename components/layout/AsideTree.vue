@@ -1,7 +1,7 @@
 <template>
   <!-- ltr -->
   <ul
-    v-if="direction == 'ltr'"
+    v-if="direction === 'ltr'"
     class="py-2.5"
     :class="[level > 0 && 'border-l']"
   >
@@ -12,7 +12,7 @@
 
   <!-- rtl -->
   <ul
-    v-if="direction == 'rtl'"
+    v-if="direction === 'rtl'"
     class="py-2.5"
     :class="[level > 0 && 'border-r']"
   >

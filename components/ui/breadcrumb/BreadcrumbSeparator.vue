@@ -1,7 +1,7 @@
 <template>
   <!-- ltr -->
   <li
-    v-if="direction == 'ltr'"
+    v-if="direction === 'ltr'"
     role="presentation"
     aria-hidden="true"
     :class="cn('[&>svg]:size-3.5', props.class)"
@@ -13,7 +13,7 @@
 
   <!-- rtl -->
   <li
-    v-if="direction == 'rtl'"
+    v-if="direction === 'rtl'"
     role="presentation"
     aria-hidden="true"
     :class="cn('[&>svg]:size-3.5', props.class)"

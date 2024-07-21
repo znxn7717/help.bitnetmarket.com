@@ -1,6 +1,6 @@
 <template>
   <!-- ltr -->
-  <UiDialog v-if="direction == 'ltr'" v-model:open="open">
+  <UiDialog v-if="direction === 'ltr'" v-model:open="open">
     <UiDialogContent class="p-0">
       <VisuallyHidden as-child>
         <UiDialogTitle />
@@ -119,7 +119,7 @@
   </UiDialog>
 
   <!-- rtl -->
-  <UiDialog v-if="direction == 'rtl'" v-model:open="open">
+  <UiDialog v-if="direction === 'rtl'" v-model:open="open">
     <UiDialogContent class="p-0">
       <VisuallyHidden as-child>
         <UiDialogTitle />

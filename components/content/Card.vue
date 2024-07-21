@@ -1,7 +1,7 @@
 <template>
   <!-- ltr -->
   <div
-    v-if="direction == 'ltr'"
+    v-if="direction === 'ltr'"
     class="[&:not(:first-child)]:mt-5 group-has-[div]:mt-0"
   >
     <NuxtLink :to="to" :target="target">
@@ -43,7 +43,7 @@
 
   <!-- rtl -->
   <div
-    v-if="direction == 'rtl'"
+    v-if="direction === 'rtl'"
     class="[&:not(:first-child)]:mt-5 group-has-[div]:mt-0"
   >
     <NuxtLink :to="to" :target="target">

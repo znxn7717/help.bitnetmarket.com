@@ -1,7 +1,7 @@
 <template>
   <UiNavigationMenu>
     <!-- ltr -->
-    <UiNavigationMenuList v-if="direction == 'ltr'">
+    <UiNavigationMenuList v-if="direction === 'ltr'">
       <UiNavigationMenuItem v-for="(item, i) in nav" :key="i">
         <template v-if="item.links">
           <UiNavigationMenuTrigger class="font-semibold bg-transparent">
@@ -43,7 +43,7 @@
     </UiNavigationMenuList>
 
     <!-- rtl -->
-    <UiNavigationMenuList v-if="direction == 'rtl'" dir="rtl">
+    <UiNavigationMenuList v-if="direction === 'rtl'" dir="rtl">
       <UiNavigationMenuItem v-for="(item, i) in nav" :key="i">
         <template v-if="item.links">
           <UiNavigationMenuTrigger class="font-semibold bg-transparent">

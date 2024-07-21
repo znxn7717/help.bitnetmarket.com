@@ -1,7 +1,7 @@
 <template>
   <LayoutHeader />
   <!-- ltr -->
-  <div v-if="direction == 'ltr'" class="border-b min-h-screen">
+  <div v-if="direction === 'ltr'" class="border-b min-h-screen">
     <div
       class="px-4 md:px-8 flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10"
       :class="[config.main.padded && 'container']"
@@ -62,7 +62,7 @@
   </div>
 
   <!-- rtl -->
-  <div v-if="direction == 'rtl'" class="border-b min-h-screen" dir="rtl">
+  <div v-if="direction === 'rtl'" class="border-b min-h-screen" dir="rtl">
     <div
       class="px-4 md:px-8 flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10"
       :class="[config.main.padded && 'container']"

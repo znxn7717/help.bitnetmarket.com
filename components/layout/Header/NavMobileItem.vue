@@ -1,6 +1,6 @@
 <template>
   <!-- ltr -->
-  <div v-if="direction == 'ltr'">
+  <div v-if="direction === 'ltr'">
     <template v-if="item.links">
       <UiCollapsible v-model:open="isOpen">
         <UiCollapsibleTrigger class="w-full text-left p-2">
@@ -50,7 +50,7 @@
     </NuxtLink>
   </div>
   <!-- rtl -->
-  <div v-if="direction == 'rtl'" dir="rtl">
+  <div v-if="direction === 'rtl'" dir="rtl">
     <template v-if="item.links">
       <UiCollapsible v-model:open="isOpen">
         <UiCollapsibleTrigger class="w-full text-right p-2 pr-3">

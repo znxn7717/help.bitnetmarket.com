@@ -1,6 +1,6 @@
 <template>
   <!-- ltr -->
-  <template v-if="enable && direction == 'ltr'">
+  <template v-if="enable && direction === 'ltr'">
     <UiButton
       v-if="style === 'input'"
       variant="outline"
@@ -21,7 +21,7 @@
   <LayoutSearchDialog v-model:open="isOpen" />
 
   <!-- rtl -->
-  <template v-if="enable && direction == 'rtl'">
+  <template v-if="enable && direction === 'rtl'">
     <UiButton
       v-if="style === 'input'"
       variant="outline"

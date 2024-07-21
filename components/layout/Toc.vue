@@ -1,6 +1,6 @@
 <template>
   <!-- ltr -->
-  <template v-if="toc?.links.length && direction == 'ltr'">
+  <template v-if="toc?.links.length && direction === 'ltr'">
     <UiScrollArea
       v-if="!isSmall"
       orientation="vertical"
@@ -63,7 +63,7 @@
   </template>
 
   <!-- rtl -->
-  <template v-if="toc?.links.length && direction == 'rtl'">
+  <template v-if="toc?.links.length && direction === 'rtl'">
     <UiScrollArea
       v-if="!isSmall"
       orientation="vertical"

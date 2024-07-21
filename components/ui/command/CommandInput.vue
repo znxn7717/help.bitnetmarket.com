@@ -1,7 +1,7 @@
 <template>
   <!-- ltr -->
   <div
-    v-if="direction == 'ltr'"
+    v-if="direction === 'ltr'"
     class="flex items-center border-b px-3"
     cmdk-input-wrapper
   >
@@ -20,7 +20,7 @@
 
   <!-- rtl -->
   <div
-    v-if="direction == 'rtl'"
+    v-if="direction === 'rtl'"
     class="flex items-center border-b px-3"
     cmdk-input-wrapper
   >

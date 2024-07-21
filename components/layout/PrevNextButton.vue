@@ -1,7 +1,7 @@
 <template>
   <!-- ltr -->
   <NuxtLink
-    v-if="prevNext && prevNext._path && direction == 'ltr'"
+    v-if="prevNext && prevNext._path && direction === 'ltr'"
     :to="prevNext._path"
     class="basis-1/3"
   >
@@ -40,7 +40,7 @@
 
   <!-- rtl -->
   <NuxtLink
-    v-if="prevNext && prevNext._path && direction == 'rtl'"
+    v-if="prevNext && prevNext._path && direction === 'rtl'"
     :to="prevNext._path"
     class="basis-1/3"
   >

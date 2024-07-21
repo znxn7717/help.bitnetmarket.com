@@ -1,6 +1,6 @@
 <template>
   <!-- ltr -->
-  <UiSheet v-if="direction == 'ltr'" v-model:open="open">
+  <UiSheet v-if="direction === 'ltr'" v-model:open="open">
     <UiSheetTrigger as-child>
       <UiButton variant="ghost" size="icon" class="md:hidden">
         <Icon name="lucide:menu" size="18" />
@@ -13,7 +13,7 @@
   </UiSheet>
 
   <!-- rtl -->
-  <UiSheet v-if="direction == 'rtl'" v-model:open="open">
+  <UiSheet v-if="direction === 'rtl'" v-model:open="open">
     <UiSheetTrigger as-child>
       <UiButton variant="ghost" size="icon" class="md:hidden">
         <Icon name="lucide:menu" size="18" />

@@ -1,6 +1,6 @@
 <template>
   <!-- ltr -->
-  <ul v-if="direction == 'ltr'" :class="[level !== 0 && 'pl-4']">
+  <ul v-if="direction === 'ltr'" :class="[level !== 0 && 'pl-4']">
     <li v-for="link in links" :key="link.id" class="pt-2">
       <NuxtLink
         :to="`#${link.id}`"
@@ -14,7 +14,7 @@
   </ul>
 
   <!-- rtl -->
-  <ul v-if="direction == 'rtl'" :class="[level !== 0 && 'pr-4']">
+  <ul v-if="direction === 'rtl'" :class="[level !== 0 && 'pr-4']">
     <li v-for="link in links" :key="link.id" class="pt-2">
       <NuxtLink
         :to="`#${link.id}`"

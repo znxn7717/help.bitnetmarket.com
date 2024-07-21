@@ -1,7 +1,7 @@
 <template>
   <!-- ltr -->
   <li
-    v-if="direction == 'ltr'"
+    v-if="direction === 'ltr'"
     class="rounded-md transition-all underline-offset-4 [&:not(:first-child)]:pt-3"
     :class="[level > 0 && 'pl-4']"
   >
@@ -44,7 +44,7 @@
 
   <!-- rtl -->
   <li
-    v-if="direction == 'rtl'"
+    v-if="direction === 'rtl'"
     class="rounded-md transition-all underline-offset-4 [&:not(:first-child)]:pt-3 px-3"
     :class="[level > 0 && 'pr-4']"
     dir="rtl"

@@ -1,7 +1,7 @@
 <template>
   <!-- ltr -->
   <UiScrollArea
-    v-if="direction == 'ltr'"
+    v-if="direction === 'ltr'"
     orientation="vertical"
     class="relative overflow-hidden h-full py-6 pr-6 text-sm"
     type="hover"
@@ -38,7 +38,7 @@
 
   <!-- rtl -->
   <UiScrollArea
-    v-if="direction == 'rtl'"
+    v-if="direction === 'rtl'"
     orientation="vertical"
     class="relative overflow-hidden h-full py-6 pl-6 text-sm"
     type="hover"
