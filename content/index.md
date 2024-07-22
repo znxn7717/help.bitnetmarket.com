@@ -13,11 +13,11 @@ navigation: false
 actions:
   - name: شروع کن
     to: /getting-started
-    rightIcon: 'lucide:rocket'
+    leftIcon: 'lucide:rocket'
   - name: مقررات مارکت
     variant: outline
     to: /terms-of-use
-    rightIcon: 'solar:ruler-outline'
+    leftIcon: 'solar:ruler-outline'
 ---
 
 #title

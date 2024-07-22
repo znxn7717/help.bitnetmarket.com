@@ -117,15 +117,15 @@ defineProps<{
       leftIcon?: string;
       rightIcon?: string;
       variant?:
-        | 'default'
-        | 'link'
-        | 'destructive'
-        | 'outline'
-        | 'secondary'
-        | 'ghost';
+        | "default"
+        | "link"
+        | "destructive"
+        | "outline"
+        | "secondary"
+        | "ghost";
       to: string;
       target?: string;
-    },
+    }
   ];
 }>();
 const { direction } = useConfig().value.theme;
