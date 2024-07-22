@@ -1,7 +1,7 @@
 export default defineAppConfig({
   shadcnDocs: {
     site: {
-      name: 'بیت نت مارکت',
+      name: 'بیت‌نت مارکت',
       description: 'Beautifully designed Nuxt Content template built with shadcn-vue. Customizable. Compatible. Open Source.',
       ogImage: '/hero.png',
     },
@@ -105,7 +105,7 @@ export default defineAppConfig({
       credits: 'MIT سورس باز',
       links: [
         {
-          title: 'بیت نت مارکت',
+          title: 'بیت‌نت مارکت',
           to: 'https://www.bitnetmarket.com/',
           target: '_blank',
         },

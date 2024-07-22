@@ -13,7 +13,7 @@
       alt="شرایط و مقررات مارکت"
       class="rounded-lg"
       style="width: 100%; height: auto; display: block"
-    >
+    />
     <LayoutHeaderIcon
       class="mr-1"
       style="
@@ -60,21 +60,21 @@
         text-align: right;
         filter: blur(0.7px) drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.8));
         color: hsl(var(--background));
-        font-weght: 90;
         white-space: nowrap;
-        line-height: 1;
+        line-height: 0.9;
+        font-family: behdad;
       "
-      class="text-3xl lg:text-4xl"
+      class="text-4xl lg:text-5xl"
     >
-      <span style="letter-spacing: -0.1em; padding-right: 6px">بیت نت</span>
-      <br>
-      <span style="letter-spacing: 0.04em">مارکت</span>
+      <span style="letter-spacing: -0.1em; padding-right: 7px">بیت‌نت</span>
+      <br />
+      <span style="letter-spacing: 0.02em">مارکت</span>
     </div>
   </div>
 </template>
 
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue';
+import { onMounted, onUnmounted, ref } from "vue";
 
 const showLogo = ref(true);
 
