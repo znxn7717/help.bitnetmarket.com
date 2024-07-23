@@ -1,12 +1,9 @@
-![Hero](https://github.com/user-attachments/assets/555cfd9b-3461-40ff-b4fa-6df7f2ba44f5)
-[![License][license-src]][license-href]![Screenshot](https://github.com/user-attachments/assets/770c61d1-eb5b-4242-bb6d-d4a4e0525722)
+![Bitnetmarket](https://github.com/user-attachments/assets/5f1189b6-1f48-4d34-8d28-3f05d51b9c7a)
 
-# shadcn-docs-nuxt
+# Bitnetmarket
 
+[![License][license-src]][license-href]
 [![built with nuxt][nuxt-src]][nuxt-href]
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-
 
 Beautifully designed _Nuxt Content_ template built with _shadcn-vue_. **Customizable. Compatible. Open Source.**
 
