@@ -64,11 +64,11 @@
         line-height: 0.9;
         font-family: behdad;
       "
-      class="text-4xl lg:text-5xl"
+      class="text-3xl lg:text-5xl text-center"
     >
-      <span style="letter-spacing: -0.1em; padding-right: 7px">بیت‌نت</span>
+      <span style="letter-spacing: -0.1em">بیت‌نت</span>
       <br />
-      <span style="letter-spacing: 0.02em">مارکت</span>
+      <span style="letter-spacing: 0.025em">مارکت</span>
     </div>
   </div>
 </template>
