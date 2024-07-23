@@ -94,9 +94,9 @@
         :target="action.target"
       >
         <UiButton :variant="action.variant">
-          <Icon v-if="action.leftIcon" :name="action.leftIcon" class="ml-1" />
+          <Icon v-if="action.rightIcon" :name="action.rightIcon" class="ml-1" />
           {{ action.name }}
-          <Icon v-if="action.rightIcon" :name="action.rightIcon" class="mr-1" />
+          <Icon v-if="action.leftIcon" :name="action.leftIcon" class="mr-1" />
         </UiButton>
       </NuxtLink>
     </section>

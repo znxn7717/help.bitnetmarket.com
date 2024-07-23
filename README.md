@@ -1,41 +1,19 @@
-![Hero](https://github.com/user-attachments/assets/555cfd9b-3461-40ff-b4fa-6df7f2ba44f5)
+![Bitnetmarket](https://github.com/user-attachments/assets/5f1189b6-1f48-4d34-8d28-3f05d51b9c7a)
 
-# shadcn-docs-nuxt
+# Bitnetmarket
 
-[![built with nuxt][nuxt-src]][nuxt-href]
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
+[![built with nuxt][nuxt-src]][nuxt-href]
 
-Beautifully designed _Nuxt Content_ template built with _shadcn-vue_. **Customizable. Compatible. Open Source.**
+Beautifully (rtl, ltr) designed _Nuxt Content_ template built with _shadcn-vue_. **Customizable. Compatible. Open Source.**
 
-- [Documentation / Demo](https://shadcn-docs.nuxt.dev/)
-
-## Quick Start
-
-1. Create a project with the [starter template](https://github.com/ZTL-UwU/shadcn-docs-nuxt-starter)
-
-  ```bash
-  npx nuxi@latest init -t github:ZTL-UwU/shadcn-docs-nuxt-starter
-  ```
-
-2. Install dependencies
-
-  ```bash
-  npm install
-  ```
-
-3. Start dev server
-
-  ```bash
-  npm run dev
-  ```
+- [Demo](https://help.bitnetmarket.com/)
 
 ## Contributing
 
 1. Clone this repository
-2. Install dependencies `bun install`.
-3. Use `bun run dev` to start dev server.
+2. Install dependencies `pnpm install`.
+3. Use `pnpm run dev` to start dev server.
 
 ## Credits
 
