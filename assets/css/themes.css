@@ -25,6 +25,13 @@ p {
     @apply font-vazirrdfdnl;
 }
 
+p,
+span,
+ul,
+div {
+    text-align: justify;
+}
+
 .zwsp {
     white-space: nowrap;
     letter-spacing: -0.1em;

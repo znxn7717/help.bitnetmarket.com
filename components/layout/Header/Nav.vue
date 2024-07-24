@@ -87,7 +87,7 @@
 </template>
 
 <script setup lang="ts">
-import { navigationMenuTriggerStyle } from '@/components/ui/navigation-menu';
+import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 
 const { direction } = useConfig().value.theme;
 const { nav } = useConfig().value.header;

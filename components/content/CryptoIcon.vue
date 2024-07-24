@@ -1,7 +1,7 @@
 <template>
   <div class="relative mx-auto p-4 my-2" dir="ltr">
     <div
-      class="grid grid-cols-6 md:grid-cols-5 gap-y-4 gap-x-4 md:gap-y-2 md:gap-x-2"
+      class="grid grid-cols-6 md:grid-cols-6 gap-y-4 gap-x-4 md:gap-y-2 md:gap-x-2"
     >
       <div>
         <svg
