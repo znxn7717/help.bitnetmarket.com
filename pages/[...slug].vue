@@ -14,8 +14,8 @@
       <main
         class="relative py-6"
         :class="[
-          config.toc.enable
-            && 'lg:gap-10 lg:py-8 lg:grid lg:grid-cols-[1fr_200px]',
+          config.toc.enable &&
+            'lg:gap-10 lg:py-8 lg:grid lg:grid-cols-[1fr_200px]',
         ]"
       >
         <div class="mx-auto w-full min-w-0">
@@ -75,8 +75,8 @@
       <main
         class="relative py-6"
         :class="[
-          config.toc.enable
-            && 'lg:gap-10 lg:py-8 lg:grid lg:grid-cols-[1fr_200px]',
+          config.toc.enable &&
+            'lg:gap-10 lg:py-8 lg:grid lg:grid-cols-[1fr_200px]',
         ]"
       >
         <div class="mx-auto w-full min-w-0">
@@ -105,16 +105,19 @@
           </Alert> -->
 
           <Card v-if="!page?.body || page?.body?.children?.length === 0">
-            <h1 class="text-9xl text-center mt-5">
-              404
-            </h1>
-            <h3 class="text-center">
+            <h1 class="text-9xl mt-5" style="text-align: center">404</h1>
+            <h3 style="text-align: center">
               صفحه
               <span dir="ltr">
                 {{ routePath }}
               </span>
               وجود ندارد.
             </h3>
+            <div class="flex justify-center mt-5">
+              <NuxtLink to="/">
+                <UiButton> بازگشت به صفحه اصلی </UiButton>
+              </NuxtLink>
+            </div>
           </Card>
 
           <ContentRenderer
@@ -144,7 +147,7 @@ const { direction } = useConfig().value.theme;
 const routePath = useRoute().path;
 
 useSeoMeta({
-  title: `${page.value?.title ?? '404'} - ${config.value.site.name}`,
+  title: `${page.value?.title ?? "404"} - ${config.value.site.name}`,
   ogTitle: page.value?.title,
   description: page.value?.description,
 });

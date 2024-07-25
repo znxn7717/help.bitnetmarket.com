@@ -2,7 +2,7 @@
   <UiCollapsible>
     <UiCollapsibleTrigger
       :class="[
-        'flex justify-between items-center cursor-pointer border rounded-lg w-full my-1',
+        'flex justify-between items-center cursor-pointer border rounded-lg w-full my-1 hover:bg-muted',
         { 'bg-muted': isExpand },
       ]"
       style="padding: 0.75rem 1.25rem"

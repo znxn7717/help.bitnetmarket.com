@@ -42,10 +42,7 @@
   </div>
 
   <!-- rtl -->
-  <div
-    v-if="direction === 'rtl'"
-    class="[&:not(:first-child)]:mt-5 group-has-[div]:mt-0"
-  >
+  <div v-if="direction === 'rtl'" class="group-has-[div]:mt-0">
     <NuxtLink :to="to" :target="target">
       <UiCard
         class="transition-all relative h-full"
