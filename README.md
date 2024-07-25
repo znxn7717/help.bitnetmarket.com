@@ -5,7 +5,7 @@
 [![License][license-src]][license-href]
 [![built with nuxt][nuxt-src]][nuxt-href]
 
-Beautifully (rtl, ltr) designed _Nuxt Content_ template built with _shadcn-vue_. **Customizable. Compatible. Open Source.**
+Beautifully (RTL, LTR) designed _Nuxt Content_ template built with _shadcn-vue_. **Customizable. Compatible. Open Source.**
 
 - [Demo](https://help.bitnetmarket.com/)
 
