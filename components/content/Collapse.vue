@@ -1,37 +1,46 @@
 <template>
   <UiCollapsible>
     <UiCollapsibleTrigger
-      class="flex justify-between items-center cursor-pointer border rounded-lg w-full my-1"
+      :class="[
+        'flex justify-between items-center cursor-pointer border rounded-lg w-full my-1',
+        { 'bg-muted': isExpand },
+      ]"
       style="padding: 0.75rem 1.25rem"
-      @click="toggleStatus"
+      @click="toggleStatus()"
     >
       <div
         :style="{
-          color: status === 'open' ? 'hsl(var(--primary))' : 'inherit',
+          color: isExpand ? 'hsl(var(--primary))' : 'inherit',
         }"
       >
-        <ContentSlot :use="$slots.title" unwrap="p" />
+        <ContentSlot
+          :use="$slots.title"
+          unwrap="p"
+          :style="{
+            color: isExpand ? 'hsl(var(--primary))' : 'inherit',
+          }"
+        />
       </div>
       <Icon
         name="mingcute:down-line"
-        size="20"
         :style="{
-          transform: status === 'open' ? 'rotate(180deg)' : 'rotate(0deg)',
-          color: status === 'open' ? 'hsl(var(--primary))' : 'inherit',
+          fontSize: '1.25rem',
+          minWidth: '1.25rem',
+          marginRight: '1.25rem',
+          transform: isExpand ? 'rotate(180deg)' : 'rotate(0deg)',
+          color: isExpand ? 'hsl(var(--primary))' : 'inherit',
+          transition: 'transform .35s',
         }"
       />
     </UiCollapsibleTrigger>
     <UiCollapsibleContent
-      v-if="$slots.description"
-      :id="id"
-      :class="{ border: status === 'open' }"
+      :class="{ border: isExpand, 'bg-muted': isExpand }"
       style="border-radius: var(--radius); padding: 0 1.25rem"
     >
       <div
         :style="{
-          paddingTop: status === 'open' ? paddingTop : '0',
-          paddingBottom: status === 'open' ? paddingBottom : '0',
-          transition: 'padding-top .35s linear, padding-bottom .35s linear',
+          padding: isExpand ? padding : '0',
+          transition: 'padding .35s linear',
           overflow: 'hidden',
         }"
       >
@@ -44,26 +53,21 @@
 <script setup lang="ts">
 import { ref, nextTick } from "vue";
 
-const status = ref("closed");
-const paddingTop = ref("0");
-const paddingBottom = ref("0");
+const isExpand = ref(false);
+const padding = ref("0 0");
+const props = defineProps<{ id: string }>();
 
 function toggleStatus() {
-  if (status.value === "closed") {
-    status.value = "open";
+  if (!isExpand.value) {
+    isExpand.value = true;
     nextTick(() => {
       requestAnimationFrame(() => {
-        paddingTop.value = "0.75rem";
-        paddingBottom.value = "0.75rem";
+        padding.value = "0.75rem 0";
       });
     });
   } else {
-    status.value = "closed";
-    paddingTop.value = "0";
-    paddingBottom.value = "0";
+    isExpand.value = false;
+    padding.value = "0";
   }
 }
-defineProps<{
-  id: string;
-}>();
 </script>
