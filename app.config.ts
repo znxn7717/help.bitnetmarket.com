@@ -108,12 +108,7 @@ export default defineAppConfig({
           title: 'بیت‌نت مارکت',
           to: 'https://www.bitnetmarket.com/',
           target: '_blank',
-        },
-        {
-          icon: 'lucide:github',
-          to: 'https://github.com/znxn7717/shadcn',
-          target: '_blank',
-        },
+        }
       ],
     },
     toc: {

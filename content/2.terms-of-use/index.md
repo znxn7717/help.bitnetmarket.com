@@ -7,7 +7,7 @@ icon: solar:ruler-outline
 
 :TermsOfUse
 
-# <div style="font-size: 2.75rem; line-height: 1.5;"> قوانین و شرایط استفاده از بیت‌نت مارکت</div>
+# <div style="font-size: 2.75rem; line-height: 1.5; text-align: center;"> قوانین و شرایط استفاده از بیت‌نت مارکت</div>
 
 ## 1. طرفین قرارداد
 

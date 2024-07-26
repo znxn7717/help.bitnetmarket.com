@@ -33,7 +33,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: right;
-        filter: blur(0.5px) drop-shadow(1px 1px 1px rgba(155, 155, 155, 1));
+        filter: blur(0.5px) drop-shadow(0.5px 0.5px 2px rgba(155, 155, 155, 1));
         color: white;
         white-space: nowrap;
         line-height: 1;
@@ -41,11 +41,7 @@
       "
       class="text-xl lg:text-2xl"
     >
-      <span>
-        <!-- <span class="zwsp">بیت نت</span>
-        مارکت  -->
-        بر لبه نوآوری
-      </span>
+      <span> بر لبه نوآوری </span>
     </div>
   </div>
 </template>

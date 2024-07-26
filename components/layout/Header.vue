@@ -53,8 +53,10 @@
   <!-- rtl -->
   <header
     v-if="direction === 'rtl'"
-    class="sticky z-40 top-0 bg-headerbackground backdrop-blur-lg"
-    :class="{ 'lg:border-b': config.header.border }"
+    class="sticky z-40 top-0 bg-background/80 dark:bg-headerbackground backdrop-blur-lg"
+    :class="{
+      'lg:border-b': config.header.border,
+    }"
     dir="rtl"
   >
     <div

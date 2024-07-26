@@ -10,38 +10,19 @@ html.dark {
     color-scheme: dark;
 }
 
-body,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-li {
+h6 {
     @apply font-behdad;
     font-weight: 100 !important;
 }
 
-[dir="rtl"] body,
-[dir="rtl"] h1,
-[dir="rtl"] h2,
-[dir="rtl"] h3,
-[dir="rtl"] h4,
-[dir="rtl"] h5,
-[dir="rtl"] h6,
-[dir="rtl"] li {
-    text-align: right;
-}
-
+body,
 p {
     @apply font-vazirrdfdnl;
-}
-
-p,
-span,
-ul,
-div {
-    text-align: justify;
 }
 
 .zwsp {

@@ -20,20 +20,17 @@ actions:
     leftIcon: 'solar:ruler-outline'
 ---
 
+
 #title
 <h1>
-نیاز به راهنمایی داری؟
+نیاز به راهنمایی داری؟<br>
   <span class="text-primary">
   ما هواتو داریم
   </span>
 </h1>
 #description
-جدیدترین مطالب درباره
-<span class= "tracking-tighter">
-بیت نت مارکت
-</span>
-را دنبال کن،
-<br>از اطلاعیه‌ها گرفته تا آموزش‌های کاربردی.
+جدیدترین مطالب درباره بیت‌نت مارکت را دنبال کن،<br>
+از اطلاعیه‌ها گرفته تا آموزش‌های کاربردی.
 ::
 
 <div class="border rounded-lg shadow-md">
