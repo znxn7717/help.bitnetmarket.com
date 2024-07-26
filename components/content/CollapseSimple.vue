@@ -2,39 +2,42 @@
   <UiCollapsible>
     <UiCollapsibleTrigger
       :class="[
-        'flex justify-between items-center cursor-pointer border rounded-lg w-full my-1 hover:bg-muted',
-        { 'bg-muted': isExpand },
+        'flex justify-between items-center cursor-pointer w-full mb-1 shadow-sm shadow-muted px-3 pt-1 rounded-lg',
       ]"
-      style="padding: 0.75rem 1.25rem"
       @click="toggleStatus()"
     >
       <div
         :style="{
           color: isExpand ? 'hsl(var(--primary))' : 'inherit',
         }"
+        dir="rtl"
       >
-        <ContentSlot
-          :use="$slots.title"
-          unwrap="p"
+        <slot
           :style="{
             color: isExpand ? 'hsl(var(--primary))' : 'inherit',
           }"
+          dir="rtl"
         />
       </div>
       <Icon
-        name="mingcute:down-line"
+        name="mingcute:left-line"
         :style="{
           fontSize: '1.25rem',
           minWidth: '1.25rem',
           marginRight: '1.25rem',
-          transform: isExpand ? 'rotate(180deg)' : 'rotate(0deg)',
+          transform: isExpand ? 'rotate(-90deg)' : 'rotate(0deg)',
           color: isExpand ? 'hsl(var(--primary))' : 'inherit',
           transition: 'transform .35s',
         }"
       />
     </UiCollapsibleTrigger>
     <UiCollapsibleContent
-      :class="{ border: isExpand, 'bg-muted': isExpand }"
+      :class="[
+        'text-justify',
+        { border: isExpand },
+        { 'bg-muted/50': isExpand },
+        { 'bg-primary/10': isExpand && $slots.detail },
+      ]"
       style="border-radius: var(--radius); padding: 0 1.25rem"
     >
       <div
@@ -45,6 +48,7 @@
         }"
       >
         <ContentSlot :use="$slots.description" unwrap="p" />
+        <ContentSlot :use="$slots.detail" unwrap="p" />
       </div>
     </UiCollapsibleContent>
   </UiCollapsible>

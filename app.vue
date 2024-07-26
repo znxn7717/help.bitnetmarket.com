@@ -7,8 +7,8 @@
 </template>
 
 <script setup lang="ts">
-import { ConfigProvider } from 'radix-vue';
-import Toaster from '@/components/ui/toast/Toaster.vue';
+import { ConfigProvider } from "radix-vue";
+import Toaster from "@/components/ui/toast/Toaster.vue";
 
 const config = useConfig();
 const { themeClass, radius } = useThemes();
@@ -19,7 +19,7 @@ useSeoMeta({
   description: config.value.site.description,
   ogDescription: config.value.site.description,
   ogImage: config.value.site.ogImage,
-  twitterCard: 'summary_large_image',
+  twitterCard: "summary_large_image",
 });
 
 useServerHead({
