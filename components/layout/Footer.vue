@@ -3,9 +3,14 @@
     <div
       class="container flex flex-col items-center justify-between gap-2 md:h-24 md:flex-row"
     >
-      <UiButton variant="ghost" size="icon">
-        <Icon name="lucide:github" size="20" />
-      </UiButton>
+      <NuxtLink
+        to="https://github.com/znxn7717/help.bitnetmarket.com"
+        target="_blank"
+      >
+        <UiButton variant="ghost" size="icon">
+          <Icon name="lucide:github" size="20" />
+        </UiButton>
+      </NuxtLink>
       <span class="text-sm">
         {{ footer.credits }}
       </span>

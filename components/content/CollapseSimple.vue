@@ -2,21 +2,20 @@
   <UiCollapsible>
     <UiCollapsibleTrigger
       :class="[
-        'flex justify-between items-center cursor-pointer w-full mb-1 shadow-sm shadow-muted px-3 pt-1 rounded-lg',
+        'flex justify-between items-center cursor-pointer w-full mb-1 px-3 pt-1 rounded-lg',
       ]"
       @click="toggleStatus()"
     >
       <div
         :style="{
           color: isExpand ? 'hsl(var(--primary))' : 'inherit',
+          textAlign: 'right',
         }"
-        dir="rtl"
       >
         <slot
           :style="{
             color: isExpand ? 'hsl(var(--primary))' : 'inherit',
           }"
-          dir="rtl"
         />
       </div>
       <Icon
@@ -59,7 +58,6 @@ import { ref, nextTick } from "vue";
 
 const isExpand = ref(false);
 const padding = ref("0 0");
-const props = defineProps<{ id: string }>();
 
 function toggleStatus() {
   if (!isExpand.value) {

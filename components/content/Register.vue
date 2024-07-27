@@ -11,6 +11,7 @@
       src="/bitnetmarket/register.png"
       alt="ایجاد فروشگاه"
       style="width: 100%; height: auto"
+      class="rounded-lg"
     />
     <LayoutHeaderIcon
       class="mr-1"

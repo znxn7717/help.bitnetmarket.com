@@ -11,10 +11,18 @@
       <div
         :style="{
           color: isExpand ? 'hsl(var(--primary))' : 'inherit',
+          textAlign: 'right',
         }"
       >
         <ContentSlot
           :use="$slots.title"
+          unwrap="p"
+          :style="{
+            color: isExpand ? 'hsl(var(--primary))' : 'inherit',
+          }"
+        />
+        <ContentSlot
+          :use="$slots.default"
           unwrap="p"
           :style="{
             color: isExpand ? 'hsl(var(--primary))' : 'inherit',
@@ -34,7 +42,11 @@
       />
     </UiCollapsibleTrigger>
     <UiCollapsibleContent
-      :class="{ border: isExpand, 'bg-muted': isExpand }"
+      :class="[
+        'text-justify',
+        { border: isExpand },
+        { 'bg-muted/50': isExpand },
+      ]"
       style="border-radius: var(--radius); padding: 0 1.25rem"
     >
       <div

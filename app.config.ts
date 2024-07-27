@@ -30,11 +30,11 @@ export default defineAppConfig({
         title: 'مستندات',
         links: [{
           title: 'فروشنده',
-          to: '/seller',
+          to: '/getting-started/seller',
           description: 'مطالب مربوط به فروشندگان',
         }, {
           title: 'مشتری',
-          to: '/customer',
+          to: '/getting-started/customer',
           description: 'مطالب مربوط به مشتریان',
           target: '_self',
         }],
@@ -45,7 +45,7 @@ export default defineAppConfig({
       }],
       links: [{
         icon: 'lucide:github',
-        to: 'https://github.com/znxn7717/shadcn',
+        to: 'https://github.com/znxn7717/help.bitnetmarket.com',
         target: '_blank',
       }],
     },
@@ -117,7 +117,7 @@ export default defineAppConfig({
       links: [{
         title: 'امتیاز گیت هاب',
         icon: 'lucide:star',
-        to: 'https://github.com/znxn7717/shadcn',
+        to: 'https://github.com/znxn7717/help.bitnetmarket.com',
         target: '_blank',
       }, {
         title: 'پنل فروشنده',
