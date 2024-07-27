@@ -6,10 +6,10 @@ navigation: false
 
 ::hero
 ---
-<!-- announcement:
-  title: 'Release v0.4.1'
-  icon: 'noto:party-popper'
-  to: /getting-started/changelog -->
+announcement:
+  title: 'لیست تغییرات'
+  icon: 'fluent-emoji-high-contrast:party-popper'
+  to: /getting-started/changelog
 actions:
   - name: شروع کن
     to: /getting-started

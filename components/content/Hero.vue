@@ -64,7 +64,7 @@
     >
       <template v-if="announcement.icon">
         <Icon :name="announcement.icon" size="16" />
-        <UiSeparator class="mx-2 h-4" orientation="vertical" />
+        <UiSeparator class="mx-1 h-4" orientation="vertical" />
       </template>
       <span class="sm:hidden">{{ announcement.title }}</span>
       <span class="hidden sm:inline">

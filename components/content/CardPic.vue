@@ -4,7 +4,7 @@
     <NuxtLink :to="to" :target="target">
       <UiCard
         class="transition-all relative h-full bg-white/10 flex flex-col"
-        :class="[to && 'hover:bg-muted']"
+        :class="[to && 'hover:bg-white/5 hover:border-primary']"
       >
         <UiCardHeader class="pt-0 px-0 overflow-hidden rounded-t-lg h-48">
           <ContentSlot
@@ -36,7 +36,7 @@
         </UiCardContent>
         <UiCardFooter
           v-if="footer"
-          class="mt-auto justify-end items-end text-muted-foreground"
+          class="mt-auto justify-end items-end text-muted-foreground pb-1"
         >
           {{ footer }}
         </UiCardFooter>

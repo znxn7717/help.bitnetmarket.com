@@ -1,20 +1,16 @@
 <template>
-  <div
-    style="
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      filter: drop-shadow(0 1px 1px rgb(255 255 255 / 0.05));
-    "
-  >
+  <!-- filter: drop-shadow(0 1px 1px rgb(255 255 255 / 0.05)); -->
+  <div style="position: relative; width: 100%; max-width: 800px">
     <img
       src="/bitnetmarket/register.png"
       alt="ایجاد فروشگاه"
       style="width: 100%; height: auto"
       class="rounded-lg"
     />
+    <!-- top: 32.344.5%;
+    left: 33.5%; height: 23.5%;-->
     <LayoutHeaderIcon
-      class="mr-1"
+      class="rotate-slowly mr-1"
       style="
         position: absolute;
         margin: 0;
@@ -25,12 +21,15 @@
         filter: blur(0.7px) drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.8));
       "
     />
+    <!-- top: 32.8%;
+    left: 20%; height: 22.5%;-->
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="304"
       height="316"
       viewBox="0 0 304 316"
       version="1.1"
+      class="rotate-slowly"
       style="
         position: absolute;
         margin: 0;
@@ -50,3 +49,18 @@
     </svg>
   </div>
 </template>
+
+<style scoped>
+/* @keyframes rotate-slowly {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-slowly {
+  animation: rotate-slowly 120s linear infinite;
+} */
+</style>
