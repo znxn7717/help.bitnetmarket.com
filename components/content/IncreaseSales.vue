@@ -5,7 +5,7 @@
     class="mb-9"
   >
     <img
-      src="/bitnetmarket/increasesales.png"
+      src="/bitnetmarket/increase-sales.png"
       alt="افزایش فروش"
       style="width: 100%; height: auto"
       class="rounded-lg"
