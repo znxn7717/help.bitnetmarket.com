@@ -2,7 +2,7 @@
   <UiCollapsible>
     <UiCollapsibleTrigger
       :class="[
-        'flex justify-between items-center cursor-pointer w-full mb-1 px-3 pt-1 rounded-lg',
+        'flex justify-between items-center cursor-pointer w-full mb-1 px-3 py-2 border rounded-lg',
       ]"
       @click="toggleStatus()"
     >

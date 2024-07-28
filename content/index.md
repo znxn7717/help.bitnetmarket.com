@@ -17,7 +17,7 @@ actions:
   - name: مقررات مارکت
     variant: outline
     to: /terms-of-use
-    leftIcon: 'solar:ruler-outline'
+    leftIcon: 'octicon:law-16'
 ---
 
 

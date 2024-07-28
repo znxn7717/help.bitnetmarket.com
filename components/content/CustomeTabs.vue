@@ -1,20 +1,15 @@
 <template>
   <UiTabs v-model="currentTab">
-    <img
+    <!-- <img
       v-if="currentTab === 'پیگیری سفارش'"
       src="/bitnetmarket/order-tracking.png"
       alt="پیگیری سفارش"
-      class="rounded-lg mb-5"
+      class="rounded-lg my-5"
       style="width: 100%; height: auto; display: block"
-    />
-    <img
-      v-if="currentTab === 'مشکل و مرجوعی'"
-      src="/bitnetmarket/problem-and-return.png"
-      alt="مشکل و مرجوعی"
-      class="rounded-lg mb-5"
-      style="width: 100%; height: auto; display: block"
-    />
-    <div class="flex flex-col">
+    /> -->
+    <order-tracking v-if="currentTab === 'پیگیری سفارش'" />
+    <problem-and-return v-if="currentTab === 'مشکل و مرجوعی'" />
+    <div class="flex flex-col mt-10">
       <div class="flex justify-center">
         <UiTabsList
           dir="rtl"
@@ -24,7 +19,7 @@
             v-for="(slot, i) in slots.default?.() ?? []"
             :key="`${i}${label(slot.props)}`"
             :value="label(slot.props)"
-            class="w-48 flex flex-col items-center text-xl hover:bg-muted shadow-sm data-[state=active]:bg-muted data-[state=active]:shadow-muted data-[state=active]:text-primary"
+            class="w-48 flex flex-col items-center text-xl hover:bg-muted shadow-sm data-[state=active]:bg-muted data-[state=active]:border data-[state=active]:border-primary data-[state=active]:text-primary rounded-lg"
           >
             <Icon
               v-if="icon(slot?.props)"
@@ -41,6 +36,7 @@
         :key="`${i}${label(slot.props)}`"
         :value="label(slot.props)"
         dir="rtl"
+        class="mt-10"
       >
         <component :is="slot" />
       </UiTabsContent>

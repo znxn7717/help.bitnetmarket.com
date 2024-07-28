@@ -4,13 +4,12 @@
       position: relative;
       width: 100%;
       max-width: 800px;
-      filter: drop-shadow(0 1px 1px rgb(255 255 255 / 0.05));
       margin-bottom: 40px;
     "
   >
     <img
-      src="/bitnetmarket/terms-of-use.png"
-      alt="شرایط و مقررات مارکت"
+      src="/bitnetmarket/order-problem.png"
+      alt="مشکل و مرجوعی"
       class="rounded-lg"
       style="width: 100%; height: auto; display: block"
     />
@@ -19,10 +18,10 @@
       style="
         position: absolute;
         margin: 0;
-        top: 45%;
-        left: 40%;
+        top: 48%;
+        left: 37%;
         transform: translate(-50%, -50%);
-        height: 25%;
+        height: 30%;
         filter: blur(0.7px) drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.8));
       "
     />
@@ -32,14 +31,14 @@
       height="32"
       viewBox="0 0 330 199"
       version="1.1"
-      fill="hsl(var(--background))"
+      fill="white"
       style="
         position: absolute;
         margin: 0;
-        top: 45%;
-        left: 56%;
+        top: 48%;
+        left: 57%;
         transform: translate(-50%, -50%);
-        width: 18%;
+        width: 23%;
         height: auto;
         filter: blur(0.7px) drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.8));
       "
@@ -56,14 +55,14 @@
       height="32"
       viewBox="0 0 300 240"
       version="1.1"
-      fill="hsl(var(--background))"
+      fill="white"
       style="
         position: absolute;
         margin: 0;
-        top: 45%;
-        left: 55%;
+        top: 48%;
+        left: 56%;
         transform: translate(-50%, -50%);
-        width: 18%;
+        width: 23%;
         height: auto;
         filter: blur(0.7px) drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.8));
       "

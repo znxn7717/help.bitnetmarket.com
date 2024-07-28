@@ -29,11 +29,12 @@ export default defineAppConfig({
       nav: [{
         title: 'مستندات',
         links: [{
-          title: 'فروشنده',
+          title: 'راهنمای فروشنده',
           to: '/getting-started/seller',
           description: 'مطالب مربوط به فروشندگان',
+          target: '_self',
         }, {
-          title: 'مشتری',
+          title: 'راهنمای مشتری',
           to: '/getting-started/customer',
           description: 'مطالب مربوط به مشتریان',
           target: '_self',

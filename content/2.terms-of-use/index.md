@@ -2,11 +2,13 @@
 title: شرایط و مقررات مارکت
 description: "سند قوانین و شرایط استفاده از بازار اجتماعی بیت‌نت مارکت"
 navigation: /terms-of-use
-icon: solar:ruler-outline
+icon: octicon:law-16
 ---
 
 :TermsOfUse
 
+:SimpleTabs
+<br>
 # <div style="font-size: 2.75rem; line-height: 1.5; text-align: center; margin-bottom: 2rem"> قوانین و شرایط استفاده از بیت‌نت مارکت</div>
 
 ::CollapseSimple  
