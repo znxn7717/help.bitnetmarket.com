@@ -9,27 +9,12 @@
     "
   >
     <img
-      v-if="imageLoaded"
-      :src="imageSrc"
+      src="/bitnetmarket/terms-of-use.png"
       alt="شرایط و مقررات مارکت"
       class="rounded-lg"
       style="width: 100%; height: auto; display: block"
     />
-    <div v-else>
-      <Skeleton class="h-[12rem]" />
-      <DNALoader
-        style="
-          position: absolute;
-          margin: 0;
-          top: 15%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 98%;
-        "
-      />
-    </div>
     <LayoutHeaderIcon
-      v-if="imageLoaded"
       class="mr-1"
       style="
         position: absolute;
@@ -42,7 +27,6 @@
       "
     />
     <svg
-      v-if="imageLoaded"
       v-show="!showLogo"
       xmlns="http://www.w3.org/2000/svg"
       height="32"
@@ -67,7 +51,6 @@
       />
     </svg>
     <svg
-      v-if="imageLoaded"
       v-show="showLogo"
       xmlns="http://www.w3.org/2000/svg"
       height="32"
@@ -98,8 +81,6 @@
 import { onMounted, onUnmounted, ref } from "vue";
 
 const showLogo = ref(true);
-const imageLoaded = ref(false);
-const imageSrc = "/bitnetmarket/terms-of-use.png";
 
 function toggleVisibility() {
   showLogo.value = !showLogo.value;
@@ -109,7 +90,6 @@ let interval;
 
 onMounted(() => {
   interval = setInterval(toggleVisibility, 5000);
-  imageLoaded.value = true;
 });
 
 onUnmounted(() => {

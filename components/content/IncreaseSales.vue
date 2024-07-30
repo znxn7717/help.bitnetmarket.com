@@ -5,12 +5,27 @@
     class="mb-9"
   >
     <img
-      src="/bitnetmarket/increase-sales.png"
+      v-if="imageLoaded"
+      :src="imageSrc"
       alt="افزایش فروش"
       style="width: 100%; height: auto"
       class="rounded-lg"
     />
+    <div v-else>
+      <Skeleton class="h-[12rem]" />
+      <DNALoader
+        style="
+          position: absolute;
+          margin: 0;
+          top: 15%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 98%;
+        "
+      />
+    </div>
     <span
+      v-if="imageLoaded"
       ref="text"
       :style="{
         position: 'absolute',
@@ -34,6 +49,8 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 
 const container = ref(null);
 const fontSize = ref(1); // default font size in rem
+const imageLoaded = ref(false);
+const imageSrc = "/bitnetmarket/increase-sales.png";
 
 const updateFontSize = () => {
   if (container.value) {
@@ -44,6 +61,7 @@ const updateFontSize = () => {
 };
 
 onMounted(() => {
+  imageLoaded.value = true;
   updateFontSize();
   window.addEventListener("resize", updateFontSize);
 });

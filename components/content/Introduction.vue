@@ -10,12 +10,27 @@
     "
   >
     <img
-      src="/bitnetmarket/introduction.png"
+      v-if="imageLoaded"
+      :src="imageSrc"
       alt="معرفی"
       class="rounded-lg"
       style="width: 100%; height: auto; display: block"
     />
+    <div v-else>
+      <Skeleton class="h-[12rem]" />
+      <DNALoader
+        style="
+          position: absolute;
+          margin: 0;
+          top: 15%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 98%;
+        "
+      />
+    </div>
     <LayoutHeaderIcon
+      v-if="imageLoaded"
       style="
         position: absolute;
         margin: 0;
@@ -27,6 +42,7 @@
       "
     />
     <div
+      v-if="imageLoaded"
       style="
         position: absolute;
         top: 90%;
@@ -45,3 +61,14 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import { onMounted, onUnmounted, ref } from "vue";
+
+const imageLoaded = ref(false);
+const imageSrc = "/bitnetmarket/introduction.png";
+
+onMounted(() => {
+  imageLoaded.value = true;
+});
+</script>

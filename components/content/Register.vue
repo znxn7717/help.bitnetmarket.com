@@ -2,14 +2,29 @@
   <!-- filter: drop-shadow(0 1px 1px rgb(255 255 255 / 0.05)); -->
   <div style="position: relative; width: 100%; max-width: 800px">
     <img
-      src="/bitnetmarket/register.png"
+      v-if="imageLoaded"
+      :src="imageSrc"
       alt="ایجاد فروشگاه"
       style="width: 100%; height: auto"
       class="rounded-lg"
     />
+    <div v-else>
+      <Skeleton class="h-[12rem]" />
+      <DNALoader
+        style="
+          position: absolute;
+          margin: 0;
+          top: 15%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 98%;
+        "
+      />
+    </div>
     <!-- top: 32.344.5%;
     left: 33.5%; height: 23.5%;-->
     <LayoutHeaderIcon
+      v-if="imageLoaded"
       class="rotate-slowly mr-1"
       style="
         position: absolute;
@@ -24,6 +39,7 @@
     <!-- top: 32.8%;
     left: 20%; height: 22.5%;-->
     <svg
+      v-if="imageLoaded"
       xmlns="http://www.w3.org/2000/svg"
       width="304"
       height="316"
@@ -49,6 +65,17 @@
     </svg>
   </div>
 </template>
+
+<script setup>
+import { onMounted, onUnmounted, ref } from "vue";
+
+const imageLoaded = ref(false);
+const imageSrc = "/bitnetmarket/register.png";
+
+onMounted(() => {
+  imageLoaded.value = true;
+});
+</script>
 
 <style scoped>
 /* @keyframes rotate-slowly {
