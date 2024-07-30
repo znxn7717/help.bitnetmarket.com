@@ -1,12 +1,5 @@
 <template>
   <UiTabs v-model="currentTab">
-    <!-- <img
-      v-if="currentTab === 'پیگیری سفارش'"
-      src="/bitnetmarket/order-tracking.png"
-      alt="پیگیری سفارش"
-      class="rounded-lg my-5"
-      style="width: 100%; height: auto; display: block"
-    /> -->
     <order-tracking v-if="currentTab === 'پیگیری سفارش'" />
     <problem-and-return v-if="currentTab === 'مشکل و مرجوعی'" />
     <div class="flex flex-col mt-10">
