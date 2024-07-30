@@ -5,12 +5,27 @@
     class="mb-9"
   >
     <img
-      src="/bitnetmarket/order-tracking.png"
+      v-if="imageLoaded"
+      :src="imageSrc"
       alt="پیگیری سفارش"
       style="width: 100%; height: auto"
       class="rounded-lg"
     />
+    <div v-else>
+      <Skeleton class="h-[12rem]" />
+      <DNALoader
+        style="
+          position: absolute;
+          margin: 0;
+          top: 15%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 98%;
+        "
+      />
+    </div>
     <LayoutHeaderIcon
+      v-if="imageLoaded"
       class="mr-1"
       style="
         position: absolute;
@@ -23,6 +38,7 @@
       "
     />
     <span
+      v-if="imageLoaded"
       ref="text"
       :style="{
         position: 'absolute',
@@ -46,7 +62,8 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 
 const container = ref(null);
 const fontSize = ref(1); // default font size in rem
-
+const imageLoaded = ref(false);
+const imageSrc = "/bitnetmarket/order-tracking.png";
 const updateFontSize = () => {
   if (container.value) {
     const baseFontSize = 16; // default base font size in px
@@ -56,6 +73,7 @@ const updateFontSize = () => {
 };
 
 onMounted(() => {
+  imageLoaded.value = true;
   updateFontSize();
   window.addEventListener("resize", updateFontSize);
 });
