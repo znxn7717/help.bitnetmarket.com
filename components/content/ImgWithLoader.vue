@@ -16,7 +16,6 @@
           top: 15%;
           left: 50%;
           transform: translate(-50%, -50%);
-          width: 98%;
         "
       />
     </div>

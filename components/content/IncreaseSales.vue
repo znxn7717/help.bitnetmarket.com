@@ -20,12 +20,11 @@
           top: 15%;
           left: 50%;
           transform: translate(-50%, -50%);
-          width: 98%;
         "
       />
     </div>
     <span
-      v-if="imageLoaded"
+      v-if="iconVisible"
       ref="text"
       :style="{
         position: 'absolute',
@@ -50,6 +49,7 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 const container = ref(null);
 const fontSize = ref(1); // default font size in rem
 const imageLoaded = ref(false);
+const iconVisible = ref(false);
 const imageSrc = "/bitnetmarket/increase-sales.png";
 
 const updateFontSize = () => {
@@ -62,6 +62,9 @@ const updateFontSize = () => {
 
 onMounted(() => {
   imageLoaded.value = true;
+  setTimeout(() => {
+    iconVisible.value = true;
+  }, 1500);
   updateFontSize();
   window.addEventListener("resize", updateFontSize);
 });

@@ -17,14 +17,13 @@
           top: 15%;
           left: 50%;
           transform: translate(-50%, -50%);
-          width: 98%;
         "
       />
     </div>
     <!-- top: 32.344.5%;
     left: 33.5%; height: 23.5%;-->
     <LayoutHeaderIcon
-      v-if="imageLoaded"
+      v-if="iconVisible"
       class="rotate-slowly mr-1"
       style="
         position: absolute;
@@ -39,7 +38,7 @@
     <!-- top: 32.8%;
     left: 20%; height: 22.5%;-->
     <svg
-      v-if="imageLoaded"
+      v-if="iconVisible"
       xmlns="http://www.w3.org/2000/svg"
       width="304"
       height="316"
@@ -70,10 +69,14 @@
 import { onMounted, onUnmounted, ref } from "vue";
 
 const imageLoaded = ref(false);
+const iconVisible = ref(false);
 const imageSrc = "/bitnetmarket/register.png";
 
 onMounted(() => {
   imageLoaded.value = true;
+  setTimeout(() => {
+    iconVisible.value = true;
+  }, 1500);
 });
 </script>
 

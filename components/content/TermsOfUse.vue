@@ -24,12 +24,11 @@
           top: 15%;
           left: 50%;
           transform: translate(-50%, -50%);
-          width: 98%;
         "
       />
     </div>
     <LayoutHeaderIcon
-      v-if="imageLoaded"
+      v-if="iconVisible"
       class="mr-1"
       style="
         position: absolute;
@@ -42,7 +41,7 @@
       "
     />
     <svg
-      v-if="imageLoaded"
+      v-if="iconVisible"
       v-show="!showLogo"
       xmlns="http://www.w3.org/2000/svg"
       height="32"
@@ -67,7 +66,7 @@
       />
     </svg>
     <svg
-      v-if="imageLoaded"
+      v-if="iconVisible"
       v-show="showLogo"
       xmlns="http://www.w3.org/2000/svg"
       height="32"
@@ -99,6 +98,7 @@ import { onMounted, onUnmounted, ref } from "vue";
 
 const showLogo = ref(true);
 const imageLoaded = ref(false);
+const iconVisible = ref(false);
 const imageSrc = "/bitnetmarket/terms-of-use.png";
 
 function toggleVisibility() {
@@ -110,6 +110,9 @@ let interval;
 onMounted(() => {
   interval = setInterval(toggleVisibility, 5000);
   imageLoaded.value = true;
+  setTimeout(() => {
+    iconVisible.value = true;
+  }, 1500);
 });
 
 onUnmounted(() => {
