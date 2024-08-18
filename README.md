@@ -7,7 +7,7 @@
 
 Beautifully (RTL, LTR) designed _Nuxt Content_ template built with _shadcn-vue_. **Customizable. Compatible. Open Source.**
 
-- [Demo](https://help.bitnetmarket.com/)
+- [Live](https://help.bitnetmarket.com/)
 
 ## Contributing
 
