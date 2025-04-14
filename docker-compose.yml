@@ -4,7 +4,7 @@ services:
     image: help_frontend
     container_name: help_frontend
     ports:
-      - "3000:3000"
+      - "3002:3000"
     # volumes:
     #   - .:/app # برای توسعه، تغییرات را سینک می‌کند
     networks:
