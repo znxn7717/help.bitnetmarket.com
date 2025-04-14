@@ -1,0 +1,16 @@
+services:
+  help_frontend:
+    build: .
+    image: help_frontend
+    container_name: help_frontend
+    ports:
+      - "3000:3000"
+    # volumes:
+    #   - .:/app # برای توسعه، تغییرات را سینک می‌کند
+    networks:
+      - 1panel-network
+    restart: unless-stopped
+
+networks:
+  1panel-network:
+    external: true
