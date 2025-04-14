@@ -103,7 +103,7 @@ export default defineAppConfig({
       },
     },
     footer: {
-      credits: 'MIT سورس باز',
+      credits: 'MIT',
       links: [
         {
           title: 'بیت‌نت مارکت',

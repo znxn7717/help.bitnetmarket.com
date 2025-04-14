@@ -31,7 +31,7 @@
     "typecheck": "nuxt typecheck",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "start": "node .output/server/index.mjs"
+    "start": "PORT=3002 NUXT_PORT=3002 node .output/server/index.mjs"
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.1.199",
