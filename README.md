@@ -13,7 +13,44 @@ Beautifully (RTL, LTR) designed _Nuxt Content_ template built with _shadcn-vue_.
 
 1. Clone this repository
 2. Install dependencies `pnpm install`.
-3. Use `pnpm run dev` to start dev server.
+3. Use `pnpm dev` to start dev server.
+
+## Run (docker)
+
+1. `docker compose up`  
+  - Runs containers defined in `docker-compose.yml`.
+
+## Run (non_docker)
+
+1. Clone this repository  
+2. Install dependencies `pnpm install`  
+3. Use `pnpm build` to bundle output  
+4. Use `pnpm start` to start  
+5. `sudo nano /etc/systemd/system/help-bitnetmarket.service`  
+  ```
+  [Unit]
+  Description=Help Bitnetmarket Nuxt Service
+  After=network.target
+
+  [Service]
+  Type=simple
+  User=root
+  WorkingDirectory=/root/bitnetmarket/help.bitnetmarket.com
+  ExecStart=/usr/bin/pnpm start
+  Restart=always
+  Environment=NODE_ENV=production
+
+  [Install]
+  WantedBy=multi-user.target
+  ```  
+7. `sudo systemctl daemon-reload`  
+  - Updates systemd with new service.
+8. `sudo systemctl enable help-bitnetmarket.service`  
+  - Enables auto-start on boot.
+9. `sudo systemctl start help-bitnetmarket.service`  
+  - Starts the service now.
+10. `sudo systemctl status help-bitnetmarket.service`  
+  - Verifies service is running.
 
 ## Credits
 
